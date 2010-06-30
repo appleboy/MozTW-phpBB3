@@ -1,0 +1,56 @@
+<!-- INCLUDE overall_header.html -->
+		
+<div id="openid">
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr><th colspan="2" valign="middle">使用 OpenID 建立帳號</th></tr>
+	<tr> 
+		<td class="row1" width="50%" ><span class="gensmall">
+			<p>您已經完成驗證：<br> {OPEN_ID}</p>
+			<!-- IF EMAIL_FROM_SREG -->
+			<label>Email from sreg: {EMAIL_FROM_SREG}</label>
+        	<!-- ENDIF -->
+        	<!-- IF NICKNAME_FROM_SREG -->
+			<label>Nickname from sreg: {NICKNAME_FROM_SREG}</label>
+        	<!-- ENDIF -->
+        	<!-- IF FULLNAME_FROM_SREG -->
+			<label>Name from sreg: {FULLNAME_FROM_SREG}</label>
+        	<!-- ENDIF -->
+        	<br>
+			<p>下一步需要建立使用者名稱，請選擇：</p>
+		</td>
+		<td class="row2">
+			<fieldset class="fields1">
+        	<!-- IF USERNAME_FROM_OPENID -->
+        	<form method="POST" action="new_openid_user.php?choice=detect_by_openid">
+        		<label>Detect username from OpenId: </label>
+        		<input type="text" name="username" class="inputbox autowidth" title="{L_USERNAME}" value="{USERNAME_FROM_OPENID}" readonly="readonly" />
+        		<input type="hidden" name="openid" value="{OPEN_ID}" />
+        		<input type="hidden" name="email" value="{EMAIL_FROM_SREG}" />
+        		<input type="submit" name="login" value="OK" class="button1" />
+        	</form>
+        	<br><br>
+        	<!-- ENDIF -->
+        	<form method="POST" action="new_openid_user.php?choice=create_new">
+        		<label>建立新的使用者名稱：</label><br>
+        		<input type="text" name="username" class="inputbox autowidth" title="{L_USERNAME}" />
+        		<input type="hidden" name="openid" value="{OPEN_ID}" />
+        		<input type="hidden" name="email" value="{EMAIL_FROM_SREG}" />
+        		<input type="submit" name="login" value="OK" class="button1" />
+        	</form>
+        	<br><br>
+        	<form method="POST" action="new_openid_user.php?choice=bind_existed">
+        		<label>將 OpenID 關聯至討論區現存的帳號：</label><br>
+        		<input type="text" name="username" class="inputbox autowidth" title="{L_USERNAME}" />
+        		<input type="password" name="password" class="inputbox autowidth" title="{L_PASSWORD}" />
+        		<input type="hidden" name="email" value="{EMAIL_FROM_SREG}" />
+        		<input type="hidden" name="openid" value="{OPEN_ID}" />
+        		<input type="submit" name="login" value="OK" class="button1" />
+        	</form>
+        	</fieldset>
+		</td>
+	</tr>
+	</table>
+</div>
+	
+
+<!-- INCLUDE overall_footer.html -->
