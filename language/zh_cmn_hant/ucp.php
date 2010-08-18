@@ -4,7 +4,7 @@
 * ucp [正體中文]
 *
 * @package language
-* @version $Id: ucp.php 9478 2009-04-22 13:08:23Z acydburn $
+* @version $Id: ucp.php 10329 2009-12-13 14:03:45Z Kellanved $
 * @copyright (c) 2001 - 2007 phpBB TW Group (Mac)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -79,6 +79,7 @@ $lang = array_merge($lang, array(
 	'ADD_NEW_RULE'   => '增加新規則',
 	'ADD_RULE'   => '增加規則',
 	'ADD_TO'   => '增加 [To]',
+	'ADD_USERS_UCP_EXPLAIN'			=> '在這裡，您可以增加新的會員到群組。您可以選擇這個群組是否為已選擇會員之新的預設群組。請每一個會員名稱輸入一行。',
 	'ADMIN_EMAIL'   => '管理員可以使用 e-mail 聯絡我',
 	'AGREE'   => '我同意以上條文',
 	'ALLOW_PM'   => '允許會員使用私人訊息聯絡我',
@@ -92,7 +93,9 @@ $lang = array_merge($lang, array(
 	'AVATAR_FEATURES_DISABLED'   => '個人頭像功能停止使用中。',
 	'AVATAR_GALLERY'   => '系統相簿',
 	'AVATAR_GENERAL_UPLOAD_ERROR'   => '無法上傳個人頭像到 %s。',
+	'AVATAR_NOT_ALLOWED'			=> '您的頭像無法顯示，因為它不被允許。',
 	'AVATAR_PAGE'   => '頁',
+	'AVATAR_TYPE_NOT_ALLOWED'		=> '您的頭像無法顯示，因為它的類型不被允許。',
 
 	'BACK_TO_DRAFTS'   => '回到已儲存的草稿',
 	'BACK_TO_LOGIN'   => '回到登入畫面',
@@ -124,6 +127,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_EXPLAIN'   => '為了避免機器人式的大量註冊，討論區需要您輸入一組確認代碼。您可以在下方的圖片中找到這組確認代碼。如果你有視覺的障礙或無法觀看代碼，請聯絡 %s管理員%s 尋求協助。',
 	'VC_REFRESH'				=> '重新讀取確認代碼',
 	'VC_REFRESH_EXPLAIN'		=> '如果您不能正確判讀確認代碼，那麼您需要點選此按鈕以獲得一個新的確認代碼。',
+
 	'CONFIRM_PASSWORD'   => '再次確認密碼',
 	'CONFIRM_PASSWORD_EXPLAIN'   => '您僅需要在更換密碼時輸入這個欄位。',
 	'COPPA_BIRTHDAY'   => '在繼續註冊步驟前，請先告訴我們您的出生日期。',
@@ -170,7 +174,7 @@ $lang = array_merge($lang, array(
 	'EDIT_DRAFT_EXPLAIN'   => '在這裡您可以編輯您的草稿。草稿不能包含附加檔案和投票資訊。',
 	'EMAIL_BANNED_EMAIL'   => '您輸入的 e-mail 位址已被禁止使用。',
 	'EMAIL_INVALID_EMAIL'   => '您輸入的 e-mail 位址是無效的。',
-	'EMAIL_REMIND'   => ' e-mail 位址必須能讓入我們聯絡到您。如果您從未在會員控制台做過更動，那它便是您註冊時提供的 e-mail 位址。',
+	'EMAIL_REMIND'   => '您輸入的 e-mail 位址必須能讓我們聯絡到您。如果您從未在會員控制台做過更動，那麼它就是您註冊時所提供的 e-mail 位址。',
 	'EMAIL_TAKEN_EMAIL'   => '您輸入的 e-mail 位址已經被他人使用。',
 	'EMPTY_DRAFT'   => '您必須輸入內容才能送出更換。',
 	'EMPTY_DRAFT_TITLE'   => '您必須輸入一個草稿主旨',
@@ -196,6 +200,7 @@ $lang = array_merge($lang, array(
 	'FOES_UPDATED'   => '您的黑名單已經成功更新。',
 	'FOLDER_ADDED'   => '資料夾已經加入。',
 	'FOLDER_MESSAGE_STATUS'   => '%1$d / %2$d 個訊息已儲存',
+	'FOLDER_NAME_EMPTY'			=> '您必須為這個資料夾輸入一個名稱。',
 	'FOLDER_NAME_EXIST'   => '資料夾 <strong>%s</strong> 已經存在。',
 	'FOLDER_OPTIONS'   => '資料夾選項',
 	'FOLDER_RENAMED'   => '資料夾已經成功重新命名。',
@@ -272,10 +277,12 @@ $lang = array_merge($lang, array(
 	'NOTIFY_METHOD_IM'   => '只用 Jabber 通知',
 	'NOTIFY_ON_PM'   => '當有新的私人訊息時通知我',
 	'NOT_ADDED_FRIENDS_ANONYMOUS'   => '您不能把匿名使用者加入好友中。',
+	'NOT_ADDED_FRIENDS_BOTS'		=> '您不能把機器人加入好友中。',
 	'NOT_ADDED_FRIENDS_FOES'   => '您不能把黑名單上的會員加入好友中。',
 	'NOT_ADDED_FRIENDS_SELF'   => '您不能把自己加入好友中。',
 	'NOT_ADDED_FOES_MOD_ADMIN'   => '您不能把管理員和版面管理員加入黑名單中。',
 	'NOT_ADDED_FOES_ANONYMOUS'   => '您不能把匿名使用者加入黑名單中。',
+	'NOT_ADDED_FOES_BOTS'			=> '您不能把機器人加入黑名單中。',
 	'NOT_ADDED_FOES_FRIENDS'   => '您不能把好友上的會員加入黑名單中。',
 	'NOT_ADDED_FOES_SELF'   => '您不能把自己加入黑名單中。',
 	'NOT_AGREE'   => '我不同意這些條款',
@@ -345,7 +352,7 @@ $lang = array_merge($lang, array(
 	'POST_EDIT_PM'   => '編輯私人訊息',
 	'POST_FORWARD_PM'   => '轉寄私人訊息',
 	'POST_NEW_PM'   => '傳送私人訊息',
-	'POST_PM_LOCKED'   => '私人訊息已鎖定',
+	'POST_PM_LOCKED'   => '私人訊息已鎖定。',
 	'POST_PM_POST'   => '引用文章',
 	'POST_QUOTE_PM'   => '引用訊息',
 	'POST_REPLY_PM'   => '回覆寄件人',
@@ -367,6 +374,8 @@ $lang = array_merge($lang, array(
 	'RENAME'   => '重新命名',
 	'RENAME_FOLDER'   => '重新命名資料夾',
 	'REPLIED_MESSAGE'   => '回覆寄件人',
+	'REPLY_TO_ALL'						=> '回覆寄件人以及所有的收件人。',
+	'REPORT_PM'							=> '檢舉私訊',
 	'RESIGN_SELECTED'   => '退出會員群組',
 	'RETURN_FOLDER'   => '%1$s回到前一個資料夾%2$s',
 	'RETURN_UCP'   => '%s回到會員控制台%s',
@@ -416,14 +425,14 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'   => '首頁',
 	'UCP_MAIN_SUBSCRIBED'   => '管理訂閱',
 
-	'UCP_MSNM'   => 'MSN Messenger',
+	'UCP_MSNM'					=> 'WL/MSN Messenger',
 	'UCP_NO_ATTACHMENTS'   => '您沒有發表附加檔案。',
 
 	'UCP_PREFS'   => '偏好設定',
 	'UCP_PREFS_PERSONAL'   => '編輯全域設定',
-	'UCP_PREFS_POST'   => '編輯發表相關設定',
-	'UCP_PREFS_VIEW'   => '編輯顯示相關設定',
-   
+	'UCP_PREFS_POST'			=> '編輯發表之預設設定',
+	'UCP_PREFS_VIEW'			=> '編輯顯示之相關選項',
+
 	'UCP_PM'   => '私人訊息',
 	'UCP_PM_COMPOSE'   => '傳送新的私人訊息',
 	'UCP_PM_DRAFTS'   => '管理私人訊息草稿',
@@ -451,6 +460,7 @@ $lang = array_merge($lang, array(
 	'UCP_ZEBRA'   => '好友 &amp; 黑名單',
 	'UCP_ZEBRA_FOES'   => '管理黑名單',
 	'UCP_ZEBRA_FRIENDS'   => '管理好友',
+	'UNDISCLOSED_RECIPIENT'			=> '不公開的收件人',
 	'UNKNOWN_FOLDER'   => '未知資料夾',
 	'UNWATCH_MARKED'   => '停止訂閱',
 	'UPLOAD_AVATAR_FILE'   => '從您的電腦上傳頭像圖檔',
@@ -482,10 +492,10 @@ $lang = array_merge($lang, array(
 	'VIEW_SMILIES'   => '顯示文章中的表情符號',
 	'VIEW_TOPICS_DAYS'   => '顯示多少天前的主題',
 	'VIEW_TOPICS_DIR'   => '顯示主題排序方向',
-	'VIEW_TOPICS_KEY'   => '顯示主題排序方式',
+	'VIEW_TOPICS_KEY'			=> '顯示主題排序由',
 	'VIEW_POSTS_DAYS'   => '顯示多少天前的文章',
 	'VIEW_POSTS_DIR'   => '顯示文章排序方向',
-	'VIEW_POSTS_KEY'   => '顯示文章排序方式',
+	'VIEW_POSTS_KEY'			=> '顯示文章排序由',
 
 	'WATCHED_EXPLAIN'   => '以下是您目前訂閱中的版面和主題列表。當它們有新文章時您將收到通知。如果您想要停止訂閱，請點選您要移除的版面或主題然後按下 <em>停止訂閱</em> 按鈕。',
 	'WATCHED_FORUMS'   => '訂閱中的版面',

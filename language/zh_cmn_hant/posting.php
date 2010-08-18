@@ -1,12 +1,12 @@
 <?php
-/** 
+/**
 *
 * posting [正體中文]
 *
 * @package language
-* @version $Id: posting.php 9464 2009-04-17 15:52:40Z acydburn $
+* @version $Id: posting.php 9742 2009-07-09 10:34:40Z bantu $
 * @copyright (c) 2001 - 2007 phpBB TW Group (Mac)
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License 
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
 
@@ -167,6 +167,8 @@ $lang = array_merge($lang, array(
 	'POST_ICON'	=> '文章圖示',
 	'POST_NORMAL'	=> '普通主題',
 	'POST_REVIEW'	=> '文章預覽',
+	'POST_REVIEW_EDIT'			=> '文章預覽',
+	'POST_REVIEW_EDIT_EXPLAIN'	=> '這篇文章當您在編輯它時，已經被其他的會員改變。您不妨檢視目前文章的版本，而適度修改您的編輯。',
 	'POST_REVIEW_EXPLAIN'	=> '這個主題目前擁有至少有一篇的新回覆，您或許希望重新檢閱您的回覆。',
 	'POST_STORED'	=> '這篇文章已經發表成功。',
 	'POST_STORED_MOD'	=> '這篇文章已經發表成功，但是在公開顯示前需要經過版主的核准。',
@@ -184,10 +186,11 @@ $lang = array_merge($lang, array(
 	'SMILIES_ARE_ON'	=> '表情符號 <em>允許</em>使用',
 	'STICKY_ANNOUNCE_TIME_LIMIT'=> '置頂或公告期限設定',
 	'STICK_TOPIC_FOR'	=> '主題置頂期限',
-	'STICK_TOPIC_FOR_EXPLAIN'	=> '輸入 0 或是留白，表示沒有期限的置頂/公告。',
+	'STICK_TOPIC_FOR_EXPLAIN'	=> '輸入 0 或是留白，表示沒有期限的置頂/公告。請注意！這個數字是相對於該文章的發文日期。',
 	'STYLES_TIP'	=> '提示：可以將風格快速地顯示在反白的文字上。',
 
 	'TOO_FEW_CHARS'				=> '您的內容包含太少個字元。',
+	'TOO_FEW_CHARS_LIMIT'		=> '您的內容包含 %1$d 個字元。您需要輸入最少的字元數是 %2$d。',
 	'TOO_FEW_POLL_OPTIONS'	=> '您至少需要輸入兩個票選的項目。',
 	'TOO_MANY_ATTACHMENTS'	=> '不能再增加更多的附加檔案了，允許的數量是 %d 個。',
 	'TOO_MANY_CHARS'			=> '您的內容包含太多個字元。',

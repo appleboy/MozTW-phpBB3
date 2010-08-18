@@ -85,7 +85,7 @@ $lang = array_merge($lang, array(
 	'DISPLAY_INLINED_EXPLAIN'		=> '如果設定為否，圖檔將顯示為一個連結。',
 	'DISPLAY_ORDER'					=> '附加檔案顯示順序',
 	'DISPLAY_ORDER_EXPLAIN'			=> '按時間顯示附加檔案順序。',
-
+	
 	'EDIT_EXTENSION_GROUP'			=> '編輯副檔名群組',
 	'EXCLUDE_ENTERED_IP'			=> '使用這個選項以排除輸入的 IP/主機。',
 	'EXCLUDE_FROM_ALLOWED_IP'		=> '從允許的 IP/主機中排除 IP',
@@ -159,6 +159,6 @@ $lang = array_merge($lang, array(
 	'UPLOAD_DIR_EXPLAIN'			=> '附加檔案的儲存路徑。請注意！假如您更改了已經上傳檔案的目錄，那麼您必須將檔案複製到新的位置。',
 	'UPLOAD_ICON'					=> '上傳圖示',
 	'UPLOAD_NOT_DIR'				=> '您指定的上傳位置不是一個資料夾。',
-	));
+));
 
 ?>

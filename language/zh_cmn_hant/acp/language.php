@@ -4,7 +4,7 @@
 * acp_language [正體中文]
 *
 * @package language
-* @version $Id: language.php,v 1.16 2007/10/04 15:07:24 acydburn Exp $
+* @version $Id: language.php 9649 2009-06-21 19:17:20Z bantu $
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -37,7 +37,7 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, array(
 	'ACP_FILES'						=> '控制台語言檔案',
-	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> '在這裡，您可以安裝/移除語言包。',
+	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> '在這裡，您可以安裝/移除語言包。預設的語言包有標記星號 (*)。',
 
 	'EMAIL_FILES'			=> 'E-mail 檔案',
 

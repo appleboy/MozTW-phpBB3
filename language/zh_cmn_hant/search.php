@@ -4,7 +4,7 @@
 * search [正體中文]
 *
 * @package language
-* @version $Id: search.php 9438 2009-04-11 11:09:45Z acydburn $
+* @version $Id: search.php 10004 2009-08-17 13:25:04Z rxu $
 * @copyright (c) 2001 - 2007 phpBB TW Group (Mac)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -53,6 +53,7 @@ $lang = array_merge($lang, array(
 	'JUMP_TO_POST'			=> '跳到文章',
 
 	'LOGIN_EXPLAIN_EGOSEARCH'	=> '您必須註冊並且登入後才能檢視您自己的文章。',
+	'LOGIN_EXPLAIN_UNREADSEARCH'=> '您必須註冊並且登入後才能檢視您尚未閱讀的文章。',
 
 	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> '您所指定要搜尋的字數太多。請不要輸入超過 %1$d 字。',
 

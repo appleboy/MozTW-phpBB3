@@ -4,7 +4,7 @@
 * acp_database [正體中文]
 *
 * @package language
-* @version $Id: database.php,v 1.25 2007/10/04 15:07:24 acydburn Exp $
+* @version $Id: database.php 9765 2009-07-17 10:11:10Z bantu $
 * @copyright (c) 2001 - 2007 phpBB TW Group (動機不明)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -54,6 +54,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_BACKUP'	=> '下載備份檔',
 
 	'FILE_TYPE'			=> '檔案類型',
+	'FILE_WRITE_FAIL'	=> '無法將檔案寫入儲存資料夾。',
 	'FULL_BACKUP'		=> '完整',
 
 	'RESTORE_FAILURE'	=> '這個備份檔可能有錯誤',

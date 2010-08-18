@@ -4,7 +4,7 @@
 * acp_common [正體中文]
 *
 * @package language
-* @version $Id: common.php 9382 2009-03-17 11:54:26Z acydburn $
+* @version $Id: common.php 10458 2010-01-26 15:26:07Z jelly_doughnut $
 * @copyright (c) 2001 - 2007 phpBB TW Group (動機不明, 心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -88,6 +88,7 @@ $lang = array_merge($lang, array(
 	'ACP_FORUM_MANAGEMENT'			=> '版面管理',
 	'ACP_FORUM_MODERATORS'			=> '版面版主',
 	'ACP_FORUM_PERMISSIONS'			=> '版面權限',
+	'ACP_FORUM_PERMISSIONS_COPY'	=> '複製版面權限',
 	'ACP_FORUM_ROLES'				=> '版面角色',
 
 	'ACP_GENERAL_CONFIGURATION'		=> '一般的組態',
@@ -125,7 +126,7 @@ $lang = array_merge($lang, array(
 	'ACP_MODULE_MANAGEMENT'		=> '模組管理',
 	'ACP_MOD_LOGS'				=> '版主記錄',
 	'ACP_MOD_ROLES'				=> '版主角色',
-
+	
 	'ACP_NO_ITEMS'				=> '還沒有細目。',
 
 	'ACP_ORPHAN_ATTACHMENTS'	=> '幽靈的附加檔案',
@@ -148,11 +149,15 @@ $lang = array_merge($lang, array(
 
 	'ACP_RESTORE'				=> '還原',
 
+	'ACP_FEED'					=> '消息來源管理',
+	'ACP_FEED_SETTINGS'			=> '消息來源設定',
+
 	'ACP_SEARCH'				=> '搜尋組態',
 	'ACP_SEARCH_INDEX'			=> '搜尋索引',
 	'ACP_SEARCH_SETTINGS'		=> '搜尋設定',
 
 	'ACP_SECURITY_SETTINGS'		=> '安全性設定',
+	'ACP_SEND_STATISTICS'		=> '發送統計的資訊',
 	'ACP_SERVER_CONFIGURATION'	=> '伺服器組態',
 	'ACP_SERVER_SETTINGS'		=> '伺服器設定',
 	'ACP_SIGNATURE_SETTINGS'	=> '簽名檔設定',
@@ -160,6 +165,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> '風格成分',
 	'ACP_STYLE_MANAGEMENT'		=> '風格管理',
 	'ACP_STYLES'				=> '風格',
+
+	'ACP_SUBMIT_CHANGES'		=> '送出改變',
 
 	'ACP_TEMPLATES'				=> '樣板',
 	'ACP_THEMES'				=> '主題',
@@ -181,8 +188,9 @@ $lang = array_merge($lang, array(
 	'ACP_USER_ROLES'				=> '會員角色',
 	'ACP_USER_SECURITY'				=> '會員安全',
 	'ACP_USER_SIG'					=> '簽名檔',
+	'ACP_USER_WARNINGS'				=> '警告',
 
-	'ACP_VC_SETTINGS'					=> '確認代碼設定',
+	'ACP_VC_SETTINGS'					=> 'CAPTCHA 模組設定',
 	'ACP_VC_CAPTCHA_DISPLAY'			=> 'CAPTCHA 圖片預覽',
 	'ACP_VERSION_CHECK'					=> '檢查更新',
 	'ACP_VIEW_ADMIN_PERMISSIONS'		=> '檢視管理員權限',
@@ -200,6 +208,7 @@ $lang = array_merge($lang, array(
 	'ADMIN'					=> '管理員',
 	'ADMIN_INDEX'			=> 'ACP 首頁',
 	'ADMIN_PANEL'			=> '管理員控制台 (ACP)',
+
 	'ADM_LOGOUT'			=> '登出&nbsp;ACP',
 	'ADM_LOGGED_OUT'		=> '成功地從 ACP 登出',
 
@@ -240,13 +249,15 @@ $lang = array_merge($lang, array(
 
 	'MANAGE'				=> '管理',
 	'MENU_TOGGLE'			=> '隱藏或顯示旁邊選單',
+	'MORE'					=> '更多的',			// 現在不使用
+	'MORE_INFORMATION'		=> '更多的資訊 »',
 	'MOVE_DOWN'				=> '往下移動',
 	'MOVE_UP'				=> '往上移動',
 
 	'NOTIFY'				=> '通知',
 	'NO_ADMIN'				=> '您沒有權限可以進入管理員控制台。',
 	'NO_EMAILS_DEFINED'		=> '沒有找到有效的 e-mail 位址。',
-	'NO_PASSWORD_SUPPLIED'	=> '要進入管理員控制台，您需要輸入您的密碼。',
+	'NO_PASSWORD_SUPPLIED'	=> '要進入管理員控制台，您需要輸入您的密碼。',	
 
 	'OFF'					=> '關',
 	'ON'					=> '開',
@@ -256,7 +267,7 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> '可用超連結',
 	'PERMISSIONS_TRANSFERRED'			=> '權限轉移',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> '您目前擁有來自 %1$s 的權限。您可以使用該會員的權限瀏覽討論區但是無法進入管理員控制台因為管理員的權限無法被轉移。您隨時都可以 <a href="%2$s"><strong>恢復您的權限設定</strong></a>。',
-	'PIXEL'								=> '像素',
+
 	'PROCEED_TO_ACP'					=> '%s進入 ACP%s',
 
 	'REMIND'							=> '提醒',
@@ -266,10 +277,11 @@ $lang = array_merge($lang, array(
 	'SELECT_ANONYMOUS'		=> '選擇匿名使用者',
 	'SELECT_OPTION'			=> '選擇選項',
 
-	'SETTING_TOO_LOW'		=> '您所輸入的設定值「%1$s」太低。允許最小的值是 %2$d。',
-	'SETTING_TOO_BIG'		=> '您所輸入的設定值「%1$s」太大。允許最大的值是 %2$d。',
-	'SETTING_TOO_LONG'		=> '您所輸入的設定值「%1$s」太長。允許最大的長度是 %2$d。',
-	'SETTING_TOO_SHORT'		=> '您所輸入的設定值「%1$s」太短。允許最小的長度是 %2$d',
+	'SETTING_TOO_LOW'		=> '您所提供的值「%1$s」太低。允許最小的值是 %2$d。',
+	'SETTING_TOO_BIG'		=> '您所提供的值「%1$s」太高。允許最大的值是 %2$d。',
+	'SETTING_TOO_LONG'		=> '您所提供的值「%1$s」太長。允許最大的長度是 %2$d。',
+	'SETTING_TOO_SHORT'		=> '您所提供的值「%1$s」太短。允許最小的長度是 %2$d。',
+	'SHOW_ALL_OPERATIONS'	=> '顯示所有的操作',
 
 	'UCP'					=> '會員控制台 (UCP)',
 	'USERNAMES_EXPLAIN'		=> '請每一行輸入一個會員名稱。',
@@ -327,11 +339,17 @@ $lang = array_merge($lang, array(
 	'NUMBER_USERS'		=> '會員數量',
 	'NUMBER_ORPHAN'		=> '幽靈的附加檔案',
 
+	'PHP_VERSION_OLD'	=> '您伺服器中的 PHP 版本將不再被未來的 phpBB 版本支援。%s詳細情形%s',
+
 	'POSTS_PER_DAY'		=> '每天的發表文章',
 
 	'PURGE_CACHE'			=> '清除快取',
 	'PURGE_CACHE_CONFIRM'	=> '您確認要清除快取嗎？',
 	'PURGE_CACHE_EXPLAIN'	=> '清除所有相關項目的快取，包含任何快取的樣板檔案以及查詢結果。',
+
+	'PURGE_SESSIONS'			=> '清除所有的 sessions',
+	'PURGE_SESSIONS_CONFIRM'	=> '您確定要清除所有的 sessions？這將會使得所有的會員登出。',
+	'PURGE_SESSIONS_EXPLAIN'	=> '清除所有的 sessions。經由清空 session 資料表，這將會使得所有的會員登出。',
 
 	'RESET_DATE'					=> '重新設定討論區啟用日期',
 	'RESET_DATE_CONFIRM'			=> '您確認要將討論區啟用日期換成目前的日期以及時間嗎？',
@@ -357,6 +375,8 @@ $lang = array_merge($lang, array(
 	'USERS_PER_DAY'		=> '每天的註冊會員',
 
 	'VALUE'					=> '值',
+	'VERSIONCHECK_FAIL'			=> '無法取得最新版本的資訊。',
+	'VERSIONCHECK_FORCE_UPDATE'	=> '重新檢查版本',
 	'VIEW_ADMIN_LOG'		=> '檢視管理員記錄',
 	'VIEW_INACTIVE_USERS'	=> '檢視未啟用的會員',
 
@@ -383,8 +403,22 @@ $lang = array_merge($lang, array(
 	'SORT_LAST_VISIT'	=> '最後訪問',
 	'SORT_REASON'		=> '理由',
 	'SORT_REG_DATE'		=> '註冊日期',
+	'SORT_LAST_REMINDER'=> '最後提醒',
+	'SORT_REMINDER'		=> '發送提醒',
 
 	'USER_IS_INACTIVE'		=> '會員尚未啟用',
+));
+
+// Send statistics page
+$lang = array_merge($lang, array(
+	'EXPLAIN_SEND_STATISTICS'	=> '請發送您的伺服器以及論壇設定的資訊到 phpBB 以作為統計分析。所有您的鑑別以及您的網站資訊將被移除 - 整個資料都是 <strong>匿名的</strong>。這資訊將提供我們關於未來 phpBB 版本決策的依據。這統計資料是可以公開的。我們也與 PHP 計畫分享這資料，以做出 phpBB 編程語言。',
+	'EXPLAIN_SHOW_STATISTICS'	=> '使用底下的按鈕，您可以預覽即將被傳送的所有變數。',
+	'DONT_SEND_STATISTICS'		=> '如果您不想發送統計的資訊到 phpBB，那麼返回。',
+	'GO_ACP_MAIN'				=> '前往 ACP 首頁',
+	'HIDE_STATISTICS'			=> '隱藏細節',
+	'SEND_STATISTICS'			=> '發送統計資訊',
+	'SHOW_STATISTICS'			=> '顯示細節',
+	'THANKS_SEND_STATISTICS'	=> '感謝您送出您的資訊。',
 ));
 
 // Log Entries
@@ -463,6 +497,7 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_MESSAGE'		=> '<strong>已更改私人訊息設定</strong>',
 	'LOG_CONFIG_POST'			=> '<strong>已更改發表設定</strong>',
 	'LOG_CONFIG_REGISTRATION'	=> '<strong>已更改會員註冊設定</strong>',
+	'LOG_CONFIG_FEED'			=> '<strong>已更改消息來源設定</strong>',
 	'LOG_CONFIG_SEARCH'			=> '<strong>已更改搜尋設定</strong>',
 	'LOG_CONFIG_SECURITY'		=> '<strong>已更改安全性設定</strong>',
 	'LOG_CONFIG_SERVER'			=> '<strong>已更改伺服器設定</strong>',
@@ -480,6 +515,8 @@ $lang = array_merge($lang, array(
 	'LOG_LOCK_POST'				=> '<strong>已鎖定文章</strong><br /> %s',
 	'LOG_MERGE'					=> '<strong>已合併文章</strong> 到主題<br />» %s',
 	'LOG_MOVE'					=> '<strong>已移動主題</strong><br /> 從 %1$s 到 %2$s',
+	'LOG_PM_REPORT_CLOSED'		=> '<strong>已結束 PM 檢舉</strong><br />» %s',
+	'LOG_PM_REPORT_DELETED'		=> '<strong>已刪除 PM 檢舉</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>已核准文章</strong><br />» %s',
 	'LOG_POST_DISAPPROVED'		=> '<strong>已拒絕文章 「%1$s」 理由如下</strong><br />» %2$s',
 	'LOG_POST_EDITED'			=> '<strong>已編輯文章 「%1$s」 由</strong><br />» %2$s',
@@ -510,6 +547,7 @@ $lang = array_merge($lang, array(
 	'LOG_ERROR_EMAIL'		=> '<strong>E-mail 錯誤</strong><br />» %s',
 
 	'LOG_FORUM_ADD'							=> '<strong>已建立新的版面</strong><br />» %s',
+	'LOG_FORUM_COPIED_PERMISSIONS'			=> '<strong>已複製版面權限</strong> 自 %1$s<br />» %2$s',
 	'LOG_FORUM_DEL_FORUM'					=> '<strong>已刪除版面</strong><br />» %s',
 	'LOG_FORUM_DEL_FORUMS'					=> '<strong>已刪除版面和它的子版面/strong><br />» %s',
 	'LOG_FORUM_DEL_MOVE_FORUMS'				=> '<strong>已刪除版面和已移動子版面</strong> 到 %1$s<br />» %2$s',
@@ -524,6 +562,8 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>已移動版面</strong> %1$s 到 %2$s <strong>上面</strong>',
 	'LOG_FORUM_SYNC'						=> '<strong>重新同步版面</strong><br />» %s',
 
+	'LOG_GENERAL_ERROR'	=> '<strong>發生一般錯誤</strong>: %1$s <br />» %2$s',
+
 	'LOG_GROUP_CREATED'		=> '<strong>已建立新的會員群組</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>已設定「%1$s」為預設會員群組</strong><br />» %2$s',
 	'LOG_GROUP_DELETE'		=> '<strong>已刪除會員群組</strong><br />» %s',
@@ -532,8 +572,11 @@ $lang = array_merge($lang, array(
 	'LOG_GROUP_REMOVE'		=> '<strong>已移除會員從會員群組</strong> %1$s 中<br />» %2$s',
 	'LOG_GROUP_UPDATED'		=> '<strong>已更新會員群組細節</strong><br />» %s',
 	'LOG_MODS_ADDED'		=> '<strong>已增加組長到會員群組</strong> %1$s 中<br />» %2$s',
-	'LOG_USERS_APPROVED'	=> '<strong>已核准會員在會員群組</strong> %1$s 中<br />» %2$s',
 	'LOG_USERS_ADDED'		=> '<strong>已增加會員到會員群組</strong> %1$s 中<br />» %2$s',
+	'LOG_USERS_APPROVED'	=> '<strong>已核准會員加入會員群組</strong> %1$s<br />» %2$s',
+	'LOG_USERS_PENDING'		=> '<strong>會員申請加入「%1$s」群組而需要被審核</strong><br />» %2$s',
+
+	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>建立圖片時出錯</strong><br />» 錯誤在 %1$s 的第 %2$s 行：%3$s',
 
 	'LOG_IMAGESET_ADD_DB'			=> '<strong>已增加圖檔組到資料庫</strong><br />» %s',
 	'LOG_IMAGESET_ADD_FS'			=> '<strong>已增加圖檔組到檔案系統</strong><br />» %s',
@@ -602,6 +645,8 @@ $lang = array_merge($lang, array(
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>已裁減會員並且保留文章</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>清除快取</strong>',
+	'LOG_PURGE_SESSIONS'		=> '<strong>清除 sessions</strong>',
+
 
 	'LOG_RANK_ADDED'		=> '<strong>已增加等級</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>已移除等級</strong><br />» %s',
@@ -610,8 +655,8 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_ADDED'		=> '<strong>已增加檢舉/拒絕理由</strong><br />» %s',
 	'LOG_REASON_REMOVED'	=> '<strong>已移除檢舉/拒絕理由</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>已更新檢舉/拒絕理由</strong><br />» %s',
-	'LOG_REFERER_INVALID'		=> '<strong>回傳確認失敗</strong><br />»回傳內容是「<em>%1$s</em>」。這請求被拒絕以及這 session 被中斷。',
 
+	'LOG_REFERER_INVALID'		=> '<strong>回傳確認失敗</strong><br />»回傳內容是「<em>%1$s</em>」。這請求被拒絕以及這 session 被中斷。',
 	'LOG_RESET_DATE'			=> '<strong>重新設定討論區啟始日期</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>重新設定最高線上人數記錄</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>重新同步會員文章數量</strong>',
@@ -653,12 +698,15 @@ $lang = array_merge($lang, array(
 	'LOG_USER_DELETED'		=> '<strong>已刪除會員</strong><br />» %s',
 	'LOG_USER_DEL_ATTACH'	=> '<strong>已移除所有此會員的附加檔案</strong><br />» %s',
 	'LOG_USER_DEL_AVATAR'	=> '<strong>已移除會員頭像</strong><br />» %s',
+	'LOG_USER_DEL_OUTBOX'	=> '<strong>已清空會員的寄件夾</strong><br />» %s',
 	'LOG_USER_DEL_POSTS'	=> '<strong>已移除所有此會員的文章</strong><br />» %s',
 	'LOG_USER_DEL_SIG'		=> '<strong>已移除會員簽名檔</strong><br />» %s',
 	'LOG_USER_INACTIVE'		=> '<strong>已停用會員</strong><br />» %s',
 	'LOG_USER_MOVE_POSTS'	=> '<strong>已移動會員的文章</strong><br />» 文章由「%1$s」移動到「%2$s」版面',
 	'LOG_USER_NEW_PASSWORD'	=> '<strong>已改變會員的密碼</strong><br />» %s',
 	'LOG_USER_REACTIVATE'	=> '<strong>已強迫會員的密碼重新啟用</strong><br />» %s',
+	'LOG_USER_REMOVED_NR'	=> '<strong>已移除會員之新註冊會員標記</strong><br />» %s',
+
 	'LOG_USER_UPDATE_EMAIL'	=> '<strong>已改變會員「%1$s」的 e-mail</strong><br />» 從「%2$s」到「%3$s」',
 	'LOG_USER_UPDATE_NAME'	=> '<strong>已改變會員名稱</strong><br />» 從「%1$s」到「%2$s」',
 	'LOG_USER_USER_UPDATE'	=> '<strong>已更新會員細節</strong><br />» %s',
@@ -682,20 +730,13 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_JOIN_PENDING'	=> '<strong>此會員已加入群組並且需要被核准</strong><br />» %s',
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>此會員已退出群組</strong><br />» %s',
 
+	'LOG_WARNING_DELETED'		=> '<strong>已刪除會員警告</strong><br />» %s',
+	'LOG_WARNINGS_DELETED'		=> '<strong>已刪除 %2$s 個會員警告</strong><br />» %1$s', // 例如：'<strong>已刪除 2 個會員警告</strong><br />» 會員名稱'
+	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>已刪除所有的會員警告</strong><br />» %s',
+
 	'LOG_WORD_ADD'			=> '<strong>已增加字詞過濾</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>已刪除字詞過濾</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>已編輯字詞過濾</strong><br />» %s',
-
-// MOD : MSSTI RSS Feeds (V1.2.1) - Start
-	'ACP_RSS'					=> 'RSS 管理',
-	'ACP_RSS_FEEDS'				=> 'RSS',
-	'LOG_CONFIG_RSS_FEEDS'		=> '<strong>設定 RSS 消息來源</strong>',
-// MOD : MSSTI RSS Feeds (V1.2.1) - End
-
-));
-
-$lang = array_merge($lang, array(
-	'LOG_ANNOUNCEMENT_UPDATED'			=> '<strong>公告已更新</strong>',
 ));
 
 ?>

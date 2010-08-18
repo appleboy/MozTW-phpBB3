@@ -4,7 +4,7 @@
 * memberlist [正體中文]
 *
 * @package language
-* @version $Id: memberlist.php 8574 2008-05-29 13:59:47Z Kellanved $
+* @version $Id: memberlist.php 9933 2009-08-06 09:12:21Z marshalrusty $
 * @copyright (c) 2001 - 2007 phpBB TW Group (Mac)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -73,7 +73,7 @@ $lang = array_merge($lang, array(
 
 	'IM_ADD_CONTACT'	=> '新增為聯絡人',
 	'IM_AIM'	=> '請注意！您必須安裝 AOL Instant Messenger 後才能使用這個功能。',
-	'IM_AIM_EXPRESS'	=> 'AIM Express',
+	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'	=> '下載程式',
 	'IM_ICQ'	=> '請注意！會員可能已選擇不接受未經請求的訊息。',
 	'IM_JABBER'	=> '請注意！會員可能已選擇不接受未經請求的訊息。',
@@ -126,7 +126,7 @@ $lang = array_merge($lang, array(
 	'SEND_MESSAGE'	=> '傳送訊息',
 	'SEND_MSNM_MESSAGE'	=> '傳送 MSNM 或 WLM 訊息',
 	'SEND_YIM_MESSAGE'	=> '傳送 YIM 訊息',
-	'SORT_EMAIL'	=> 'E-mail',
+	'SORT_EMAIL'			=> 'E-mail',
 	'SORT_LAST_ACTIVE'	=> '最後訪問',
 	'SORT_POST_COUNT'	=> '文章總數',
 
@@ -134,6 +134,10 @@ $lang = array_merge($lang, array(
 	'USER_ADMIN'	=> '管理會員',
 	'USER_BAN'				=> '封鎖中',
 	'USER_FORUM'	=> '會員統計',
+	'USER_LAST_REMINDED'	=> array(
+		0		=> '此時沒有發送提醒',
+		1		=> '已發送 %1$d 個提醒<br />» %2$s',
+	),
 	'USER_ONLINE'	=> '線上',
 	'USER_PRESENCE'	=> '個人頭像',
 

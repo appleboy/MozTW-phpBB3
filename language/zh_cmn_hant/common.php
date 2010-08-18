@@ -1,10 +1,10 @@
 <?php
-/**
+/** 
 *
 * common [正體中文]
 *
 * @package language
-* @version $Id: common.php 9464 2009-04-17 15:52:40Z acydburn $
+* @version $Id: common.php 10441 2010-01-25 15:57:10Z nickvergessen $
 * @copyright (c) 2001 - 2007 phpBB TW Group (yoshika, 心靈捕手, 動機不明)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -40,8 +40,8 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> '正體中文語系由<a href="http://phpbb-tw.net/" onclick="window.open(this.href);return false;">竹貓星球</a>維護製作',
-	'DIRECTION'	=> 'ltr',
+	'TRANSLATION_INFO'	=> '正體中文語系由 <a href="http://phpbb-tw.net/" onclick="window.open(this.href);return false;"><span style="color:#ff6633"><strong>竹貓星球</strong></span></a> 維護製作',
+	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'	=> '|Y-m-d|',// 2007-01-01
 	'USER_LANG'	=> 'zh-tw',
 
@@ -56,13 +56,13 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_ALREADY_ACTIVATED'	=> '您的帳號已經被啟用。',
 	'ACCOUNT_DEACTIVATED'	=> '您的帳號已經被停用，並且只有管理員才能重新啟用。',
 	'ACCOUNT_NOT_ACTIVATED'	=> '您的帳號尚未被啟用',
-	'ACP'	=> '管理員控制台',
+	'ACP'	=> '管理員控制台 (ACP)',
 	'ACTIVE'	=> '啟用',
 	'ACTIVE_ERROR'	=> '您指定了一個未被啟用的會員名稱。如果您有啟用帳號的問題，那麼請聯絡管理員。',
 	'ADMINISTRATOR'	=> '管理員',
 	'ADMINISTRATORS'	=> '管理員',
 	'AGE'	=> '年齡',
-	'AIM'	=> 'AIM',
+	'AIM'							=> 'AIM',
 	'ALLOWED'	=> '允許',
 	'ALL_FILES'	=> '所有檔案',
 	'ALL_FORUMS'	=> '所有版面',
@@ -71,8 +71,6 @@ $lang = array_merge($lang, array(
 	'ALL_TIMES'	=> '所有顯示的時間為 %1$s %2$s',
 	'ALL_TOPICS'	=> '所有主題',
 	'AND'	=> '和',
-	'ANNOUNCEMENT_TITLE_GUESTS'		=> '訪客公告', // 標題留白時的預設值
-	'ANNOUNCEMENT_TITLE'			=> '論壇公告', // 標題留白時的預設值
 	'ARE_WATCHING_FORUM'	=> '您訂閱了這個版面，版面更新時會發送通知給您。',
 	'ARE_WATCHING_TOPIC'	=> '您訂閱了這個主題，主題更新時會發送通知給您。',
 	'ASCENDING'	=> '依序遞增',
@@ -112,7 +110,7 @@ $lang = array_merge($lang, array(
 	'BROWSING_FORUM'		=> '正在瀏覽這個版面的使用者：%1$s',
 	'BROWSING_FORUM_GUEST'	=> '正在瀏覽這個版面的使用者：%1$s 和 %2$d 位訪客',
 	'BROWSING_FORUM_GUESTS'	=> '正在瀏覽這個版面的使用者：%1$s 和 %2$d 位訪客',
-	'BYTES'	=> 'Bytes',
+	'BYTES'					=> 'Bytes',
 
 	'CANCEL'	=> '取消',
 	'CHANGE'	=> '變更',
@@ -252,6 +250,7 @@ $lang = array_merge($lang, array(
 	'G_REGISTERED'	=> '註冊會員',
 	'G_REGISTERED_COPPA'	=> '註冊 COPPA 會員',
 	'G_GLOBAL_MODERATORS'	=> '全域版主',
+	'G_NEWLY_REGISTERED'		=> '新註冊會員',
 
 	'HIDDEN_USERS_ONLINE'			=> '%d 位隱形會員上線',
 	'HIDDEN_USERS_TOTAL'			=> '%d 位隱形會員',
@@ -267,7 +266,7 @@ $lang = array_merge($lang, array(
 	'HOURS'	=> '小時',
 	'HOME'	=> '首頁',
 
-	'ICQ'	=> 'ICQ',
+	'ICQ'						=> 'ICQ',
 	'ICQ_STATUS'	=> 'ICQ 狀態',
 	'IF'	=> '如果',
 	'IMAGE'	=> '圖檔',
@@ -279,16 +278,16 @@ $lang = array_merge($lang, array(
 	'INTERESTS'	=> '興趣',
 	'INVALID_DIGEST_CHALLENGE'	=> '無效的摘要需求。',
 	'INVALID_EMAIL_LOG'	=> '<strong>%s</strong> 可能是無效的 e-mail 位址？',
-	'IP'	=> 'IP',
+	'IP'						=> 'IP',
 	'IP_BLACKLISTED'	=> '您的 IP %1$s 已經被封鎖，因為它在封鎖列表中。細節請參考 <a href="%2$s">%2$s</a>。',
 
-	'JABBER'	=> 'Jabber',
+	'JABBER'				=> 'Jabber',
 	'JOINED'	=> '註冊時間',
 	'JUMP_PAGE'				=> '輸入您想要前往的頁數',
 	'JUMP_TO'	=> '前往 ',
 	'JUMP_TO_PAGE'	=> '點選要前往的頁面...',
 
-	'KB'	=> 'KB',
+	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
 
 	'LAST_POST'	=> '最後發表',
@@ -324,7 +323,7 @@ $lang = array_merge($lang, array(
 	'MARK_FORUMS_READ'	=> '將版面標示為已閱讀',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
-	'MCP'	=> '版主控制台',
+	'MCP'	=> '版主控制台 (MCP)',
 	'MEMBERLIST'	=> '會員列表',
 	'MEMBERLIST_EXPLAIN'	=> '檢視完整的會員列表',
 	'MERGE'	=> '合併',
@@ -385,6 +384,8 @@ $lang = array_merge($lang, array(
 	'NO_ONLINE_USERS'	=> '沒有註冊會員',
 	'NO_POSTS'	=> '沒有文章',
 	'NO_POSTS_TIME_FRAME'	=> '在選定的時段中這個主題沒有文章存在。',
+	'NO_FEED_ENABLED'			=> '在這個論壇的消息來源是不可用的。',
+	'NO_FEED'					=> '所需求的消息來源是不可用的。',
 	'NO_SUBJECT'	=> '沒有輸入標題',
 	'NO_SUCH_SEARCH_MODULE'	=> '指定的搜尋模組不存在。',
 	'NO_SUPPORTED_AUTH_METHODS'	=> '沒有可支援的認證方式。',
@@ -416,8 +417,9 @@ $lang = array_merge($lang, array(
 
 	'PAGE_OF'	=> '第 <strong>%1$d</strong> 頁 (共 <strong>%2$d</strong> 頁)',
 	'PASSWORD'	=> '密碼',
+	'PIXEL'					=> '像素',
 	'PLAY_QUICKTIME_FILE'	=> '播放 Quicktime 檔案',
-	'PM'	=> 'PM',
+	'PM'					=> 'PM',
 	'POSTING_MESSAGE'	=> '發表訊息於 %s',
 	'POSTING_PRIVATE_MESSAGE'	=> '編寫私人訊息',
 	'POST'	=> '文章',
@@ -449,7 +451,7 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGE'	=> '私人訊息',
 	'PRIVATE_MESSAGES'	=> '私人訊息',
 	'PRIVATE_MESSAGING'	=> '私人訊息',
-	'PROFILE'	=> '會員控制台',
+	'PROFILE'	=> '會員控制台 (UCP)',
 
 	'READING_FORUM'	=> '正在檢視 %s 版面的主題',
 	'READING_GLOBAL_ANNOUNCE'	=> '檢視全域公告',
@@ -488,16 +490,20 @@ $lang = array_merge($lang, array(
 	'RETURN_PAGE'	=> '%s回到先前的頁面%s',
 	'RETURN_TOPIC'	=> '%s回到最近瀏覽的主題%s',
 	'RETURN_TO'	=> '回到',
+	'FEED'						=> '消息來源',
+	'FEED_NEWS'					=> '新聞',
+	'FEED_TOPICS_ACTIVE'		=> '最近討論的主題',
+	'FEED_TOPICS_NEW'			=> '新的主題',
 	'RULES_ATTACH_CAN'	=> '您 <strong>可以</strong> 在這個版面上傳附加檔案',
 	'RULES_ATTACH_CANNOT'	=> '您 <strong>不能</strong> 在這個版面上傳附加檔案',
-	'RULES_DELETE_CAN'	=> '您 <strong>可以</strong> 在這個版面刪除文章',
-	'RULES_DELETE_CANNOT'	=> '您 <strong>不能</strong> 在這個版面刪除文章',
+	'RULES_DELETE_CAN'	=> '您 <strong>可以</strong> 在這個版面刪除您的文章',
+	'RULES_DELETE_CANNOT'	=> '您 <strong>不能</strong> 在這個版面刪除您的文章',
 	'RULES_DOWNLOAD_CAN'	=> '您 <strong>可以</strong> 在這個版面下載附加檔案',
 	'RULES_DOWNLOAD_CANNOT'	=> '您 <strong>不能</strong> 在這個版面下載附加檔案',
-	'RULES_EDIT_CAN'	=> '您 <strong>可以</strong> 在這個版面編輯文章',
-	'RULES_EDIT_CANNOT'	=> '您 <strong>不能</strong> 在這個版面編輯文章',
-	'RULES_LOCK_CAN'	=> '您 <strong>可以</strong> 在這個版面鎖定文章',
-	'RULES_LOCK_CANNOT'	=> '您 <strong>不能</strong> 在這個版面鎖定文章',
+	'RULES_EDIT_CAN'	=> '您 <strong>可以</strong> 在這個版面編輯您的文章',
+	'RULES_EDIT_CANNOT'	=> '您 <strong>不能</strong> 在這個版面編輯您的文章',
+	'RULES_LOCK_CAN'	=> '您 <strong>可以</strong> 在這個版面鎖定您的文章',
+	'RULES_LOCK_CANNOT'	=> '您 <strong>不能</strong> 在這個版面鎖定您的文章',
 	'RULES_POST_CAN'	=> '您 <strong>可以</strong> 在這個版面發表主題',
 	'RULES_POST_CANNOT'	=> '您 <strong>不能</strong> 在這個版面發表主題',
 	'RULES_REPLY_CAN'	=> '您 <strong>可以</strong> 在這個版面回覆主題',
@@ -519,6 +525,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_SELF'	=> '檢視您的文章',
 	'SEARCH_TOPIC'	=> '搜尋這個主題...',
 	'SEARCH_UNANSWERED'	=> '檢視沒有回覆的主題',
+	'SEARCH_UNREAD'				=> '檢視沒有閱讀的文章',
 	'SECONDS'	=> '秒',
 	'SELECT'	=> '選擇',
 	'SELECT_ALL_CODE'	=> '選擇全部',
@@ -537,6 +544,7 @@ $lang = array_merge($lang, array(
 	'SORT_JOINED'	=> '註冊時間',
 	'SORT_LOCATION'	=> '來自',
 	'SORT_RANK'	=> '等級',
+	'SORT_POSTS'				=> '文章',
 	'SORT_TOPIC_TITLE'	=> '主題',
 	'SORT_USERNAME'	=> '會員名稱',
 	'SPLIT_TOPIC'	=> '分割主題',
@@ -600,6 +608,7 @@ $lang = array_merge($lang, array(
 
 	'TOPIC'	=> '主題',
 	'TOPICS'	=> '主題',
+	'TOPICS_UNAPPROVED'	=> '在這論壇至少有一個主題沒有被核准。',
 	'TOPIC_ICON'	=> '主題圖示',
 	'TOPIC_LOCKED'	=> '這個主題已被鎖定，您不能編輯或回覆這個主題。',
 	'TOPIC_LOCKED_SHORT'=> '主題已鎖定',
@@ -646,16 +655,18 @@ $lang = array_merge($lang, array(
 	'USERS'	=> '會員',
 	'USE_PERMISSIONS'	=> '切換成此會員的權限 (測試用)',
 
+	'USER_NEW_PERMISSION_DISALLOWED'	=> '很抱歉！您沒有權限使用這個功能。您只是剛在這裡註冊，您需要有更多的參與，才可使用這個功能。',
+
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',
 	'VIEWED'	=> '已觀看',
 	'VIEWING_FAQ'	=> '檢視問答集',
 	'VIEWING_MEMBERS'	=> '檢視會員細節',
 	'VIEWING_ONLINE'	=> '檢視誰在線上',
-	'VIEWING_MCP'	=> '檢視版主控制台',
+	'VIEWING_MCP'	=> '檢視版主控制台 (MCP)',
 	'VIEWING_MEMBER_PROFILE'	=> '檢視會員個人資料',
 	'VIEWING_PRIVATE_MESSAGES'	=> '檢視私人訊息',
 	'VIEWING_REGISTER'	=> '正在註冊帳號',
-	'VIEWING_UCP'	=> '檢視會員控制台',
+	'VIEWING_UCP'	=> '檢視會員控制台 (UCP)',
 	'VIEWS'	=> '觀看',
 	'VIEW_BOOKMARKS'	=> '檢視我的最愛',
 	'VIEW_FORUM_LOGS'	=> '檢視記錄',
@@ -678,7 +689,7 @@ $lang = array_merge($lang, array(
 	'WARN_USER'	=> '警告會員',
 	'WELCOME_SUBJECT'	=> '歡迎來到 %s 討論區',
 	'WEBSITE'	=> '網站',
-	'WHOIS'	=> 'Whois',
+	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'	=> '誰在線上',
 	'WRONG_PASSWORD'	=> '您輸入了錯誤的密碼。',
 
@@ -691,13 +702,13 @@ $lang = array_merge($lang, array(
 	'YEAR'	=> '年',
 	'YEAR_MONTH_DAY'	=> '(YYYY-MM-DD)',
 	'YES'	=> '是',
-	'YIM'	=> 'YIM',
+	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> '最後訪問是 %s',
 	'YOU_NEW_PM'	=> '您的收件夾中有一個新訊息。',
 	'YOU_NEW_PMS'	=> '您的收件夾中有多個新訊息。',
 	'YOU_NO_NEW_PM'	=> '您的收件夾中沒有新的訊息。',
 
-	'datetime'	=> array(
+	'datetime'			=> array(
 		'TODAY'	=> '今天',
 		'TOMORROW'	=> '明天',
 		'YESTERDAY'	=> '昨天',
@@ -751,7 +762,7 @@ $lang = array_merge($lang, array(
 		'Dec'	=> '12月',
 	),
 
-	'tz'	=> array(
+	'tz'				=> array(
 		'-12'	=> 'UTC - 12 小時',
 		'-11'	=> 'UTC - 11 小時',
 		'-10'	=> 'UTC - 10 小時',
@@ -767,7 +778,7 @@ $lang = array_merge($lang, array(
 		'-3'	=> 'UTC - 3 小時',
 		'-2'	=> 'UTC - 2 小時',
 		'-1'	=> 'UTC - 1 小時',
-		'0'	=> 'UTC',
+		'0'		=> 'UTC',
 		'1'	=> 'UTC + 1 小時',
 		'2'	=> 'UTC + 2 小時',
 		'3'	=> 'UTC + 3 小時',
@@ -852,14 +863,6 @@ $lang = array_merge($lang, array(
 	// The default dateformat which will be used on new installs in this language
 	// Translators should change this if a the usual date format is different
 	'default_dateformat'	=> 'Y年 M j日, H:i', // 2007年 1月 1日, 13:37
-
-// MOD : MSSTI RSS Feeds (V1.2.1) - Start
-	'YOUR_POSTS'			=> '您的文章',
-	'RSS_FEEDS'				=> 'RSS 消息來源',
-	'RSS_NEWS'				=> '新聞',
-	'RSS_NEWPOST'			=> '新的文章',
-	'RSS_ATTACH'			=> '夾檔',
-// MOD : MSSTI RSS Feeds (V1.2.1) - End
 
 ));
 

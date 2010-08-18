@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB3
-* @version $Id: bbcode.php 9461 2009-04-17 15:23:17Z acydburn $
+* @version $Id$
 * @log 2010-06-10 appleboy $
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
@@ -136,7 +136,7 @@ class bbcode
 	*/
 	function bbcode_cache_init()
 	{
-		global $user, $phpbb_root_path;
+		global $phpbb_root_path, $template, $user;
 
 		if (empty($this->template_filename))
 		{
@@ -273,7 +273,7 @@ class bbcode
 				case 6:
 					$this->bbcode_cache[$bbcode_id] = array(
 						'preg' => array(
-							'!\[color=(#[0-9a-f]{6}|[a-z\-]+):$uid\](.*?)\[/color:$uid\]!is'	=> $this->bbcode_tpl('color', $bbcode_id),
+							'!\[color=(#[0-9a-f]{3}|#[0-9a-f]{6}|[a-z\-]+):$uid\](.*?)\[/color:$uid\]!is'	=> $this->bbcode_tpl('color', $bbcode_id),
 						)
 					);
 				break;
@@ -368,7 +368,7 @@ class bbcode
 								// In order to use templates with custom bbcodes we need
 								// to replace all {VARS} to corresponding backreferences
 								// Note that backreferences are numbered from bbcode_match
-								if (preg_match_all('/\{(URL|LOCAL_URL|EMAIL|TEXT|SIMPLETEXT|IDENTIFIER|COLOR|NUMBER)[0-9]*\}/', $rowset[$bbcode_id]['bbcode_match'], $m))
+								if (preg_match_all('/\{(URL|LOCAL_URL|EMAIL|TEXT|SIMPLETEXT|INTTEXT|IDENTIFIER|COLOR|NUMBER)[0-9]*\}/', $rowset[$bbcode_id]['bbcode_match'], $m))
 								{
 									foreach ($m[0] as $i => $tok)
 									{

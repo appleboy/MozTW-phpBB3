@@ -72,8 +72,8 @@ $lang = array_merge($lang, array(
 
 	'MAX_SEARCH_CHARS'						=> '搜尋索引的最大字元數',
 	'MAX_SEARCH_CHARS_EXPLAIN'				=> '搜尋時多於這個字元數的字詞將不會被檢索。',
-	'MAX_NUM_SEARCH_KEYWORDS'				=> '允許最大的關鍵字數量',
-	'MAX_NUM_SEARCH_KEYWORDS_EXPLAIN'		=> '使用者能夠搜尋之最大的關鍵字數量。設定 0 表示無限制。',
+	'MAX_NUM_SEARCH_KEYWORDS'				=> '允許最大的關鍵字數',
+	'MAX_NUM_SEARCH_KEYWORDS_EXPLAIN'		=> '使用者能夠搜尋之最大的關鍵字數。設定 0 表示無限制。',
 	'MIN_SEARCH_CHARS'						=> '搜尋索引的最小字元數',
 	'MIN_SEARCH_CHARS_EXPLAIN'				=> '搜尋時少於這個字元數的字詞將不會被檢索。',
 	'MIN_SEARCH_AUTHOR_CHARS'				=> '作者姓名最小的字元數',

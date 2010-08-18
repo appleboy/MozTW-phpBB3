@@ -4,7 +4,7 @@
 * acp_styles [正體中文]
 *
 * @package language
-* @version $Id: styles.php 9046 2008-11-02 16:19:11Z acydburn $
+* @version $Id: styles.php 10074 2009-08-31 11:25:28Z acydburn $
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -39,7 +39,7 @@ $lang = array_merge($lang, array(
 	'ACP_IMAGESETS_EXPLAIN'	=> '圖檔組包含所有按鈕、版面、資料夾等等討論區所使用而無特定風格的圖片。在這裡，您可以編輯、匯出或者刪除圖檔組，以及匯入或啟用新的設定。',
 	'ACP_STYLES_EXPLAIN'	=> '在這裡，您可以管理在您討論區可用的風格。一個風格包含一個樣板、主題和圖檔包。您可以更改存在的風格、刪除、停用、啟用、建立或匯入新的風格。您也可以使用預覽功能看看風格像甚麼樣子。目前的預設風格使用星號 (*) 標示。這裡還列出了使用每個風格的會員總數，此數不考慮會員風格被覆蓋的情況。',
 	'ACP_TEMPLATES_EXPLAIN'	=> '樣板組包含所有用於生成您討論區佈置的標示。在這裡，您可以編輯已經存在的樣板設定、刪除、匯入、匯出以及預覽。您也可以修改用於生成 BBCode 的樣板代碼。',
-	'ACP_THEMES_EXPLAIN'	=> '在這裡，您可以建立、安裝、編輯、刪除和匯出主題。主題是色彩和圖檔的結合，應用於樣板上而定義您討論區基本的樣帽。選項開放的範圍取決於您的伺服器和 phpBB 安裝的設定，檢視手冊以獲得更多說明。請注意！以目前存在的主題為基礎建立新主題是可行的。',
+	'ACP_THEMES_EXPLAIN'	=> '在這裡，您可以建立、安裝、編輯、刪除和匯出主題。主題是色彩和圖檔的結合，應用於樣板上而定義您討論區基本的樣貌。選項開放的範圍取決於您的伺服器和 phpBB 安裝的設定，檢視手冊以獲得更多說明。請注意！以目前存在的主題為基礎建立新主題是可行的。',
 	'ADD_IMAGESET'			=> '建立圖檔組',
 	'ADD_IMAGESET_EXPLAIN'	=> '在這裡，您可以建立新的圖檔組。取決於您的伺服器設定以及檔案權限，在此您也許有額外的選項。例如：您可以基於已經存在的圖檔組建立新的，您也可以上傳或匯入 (從 store 檔案夾) 圖檔組壓縮檔。如果您上傳或匯入圖檔組壓縮檔，圖檔組名稱是可選的 (將圖檔組名稱留白)。',
 	'ADD_STYLE'				=> '建立風格',
@@ -392,6 +392,7 @@ $lang = array_merge($lang, array(
 	'TEMPLATE_LOCATION'			=> '儲存樣板在',
 	'TEMPLATE_LOCATION_EXPLAIN'	=> '圖檔總是儲存在檔案系統。',
 	'TEMPLATE_NAME'				=> '樣板名稱',
+	'TEMPLATE_FILE_NOT_WRITABLE'=> '無法寫入樣板檔 %s。請檢查資料夾的的權限以及檔案。',
 	'TEMPLATE_REFRESHED'		=> '樣板重新整理成功。',
 
 	'THEME_ADDED'				=> '新的主題增加在檔案系統。',

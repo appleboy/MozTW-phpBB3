@@ -4,7 +4,7 @@
 * search_synonyms [English]
 *
 * @package language
-* @version $Id: search_synonyms.php,v 1.3 2007/10/04 15:07:24 acydburn Exp $
+* @version $Id: search_synonyms.php 10280 2009-11-19 13:22:55Z bantu $
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -26,7 +26,7 @@ $synonyms = array(
 	'anemia'			=> 'anaemia',
 	'anemic'			=> 'anaemic',
 	'anesthesia'		=> 'anaesthesia',
-	'appologize'		=> 'appologise',
+	'apologize'			=> 'apologise',
 	'archean'			=> 'archaean',
 	'archeology'		=> 'archaeology',
 	'archeozoic'		=> 'archaeozoic',

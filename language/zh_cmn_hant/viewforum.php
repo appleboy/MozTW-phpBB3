@@ -36,7 +36,7 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ACTIVE_TOPICS'			=> '新文章',
+	'ACTIVE_TOPICS'			=> '最近討論的主題',
 	'ANNOUNCEMENTS'			=> '公告',
 
 	'FORUM_PERMISSIONS'		=> '版面權限',
@@ -44,14 +44,14 @@ $lang = array_merge($lang, array(
 	'ICON_ANNOUNCEMENT'		=> '公告',
 	'ICON_STICKY'			=> '置頂',
 
-	'LOGIN_NOTIFY_FORUM'	=> '您在本版面有通知，請登入檢視。',
+	'LOGIN_NOTIFY_FORUM'	=> '您有關於本版面的通知，請登入後檢視它。',
 
 	'MARK_TOPICS_READ'		=> '將所有主題標示為已閱讀',
 
-	'NEW_POSTS_HOT'			=> '新文章【熱門】',
-	'NEW_POSTS_LOCKED'		=> '新文章【鎖定】',
-	'NO_NEW_POSTS_HOT'		=> '沒有新文章【熱門】',
-	'NO_NEW_POSTS_LOCKED'	=> '沒有新文章【鎖定】',
+	'NEW_POSTS_HOT'			=> '有新文章【熱門的】',
+	'NEW_POSTS_LOCKED'		=> '有新文章【鎖定的】',
+	'NO_NEW_POSTS_HOT'		=> '無新文章【熱門的】',
+	'NO_NEW_POSTS_LOCKED'	=> '無新文章【鎖定的】',
 	'NO_READ_ACCESS'		=> '您沒有閱讀本版面文章的權限。',
 
 	'POST_FORUM_LOCKED'		=> '版面已鎖定',

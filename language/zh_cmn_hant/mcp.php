@@ -4,7 +4,7 @@
 * mcp [正體中文]
 *
 * @package language
-* @version $Id: mcp.php 8940 2008-09-26 11:25:04Z toonarmy $
+* @version $Id: mcp.php 10455 2010-01-26 14:06:00Z nickvergessen $
 * @copyright (c) 2001 - 2007 phpBB TW Group (Mac)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -46,6 +46,7 @@ $lang = array_merge($lang, array(
 	'ALL_NOTES_DELETED'		=> '成功刪除所有會員的意見/反應',
 	'ALL_REPORTS'			=> '所有檢舉',
 	'ALREADY_REPORTED'		=> '這篇文章已經被檢舉過了。',
+	'ALREADY_REPORTED_PM'	=> '這則私訊已經被檢舉過了。',
 	'ALREADY_WARNED'		=> '這篇文章已經被警告過了。',
 	'APPROVE'				=> '核准',
 	'APPROVE_POST'			=> '核准這篇文章',
@@ -58,11 +59,19 @@ $lang = array_merge($lang, array(
 	'CANNOT_WARN_SELF'		=> '您不能警告您自己。',
 	'CAN_LEAVE_BLANK'		=> '這裡可以不填寫。',
 	'CHANGE_POSTER'			=> '改變文章的發表人',
+	'CLOSE_PM_REPORT'		=> 'PM 檢舉結案',
+	'CLOSE_PM_REPORT_CONFIRM'	=> '您確定要將這個 PM 檢舉結案？',
+	'CLOSE_PM_REPORTS'		=> 'PM 檢舉結案',
+	'CLOSE_PM_REPORTS_CONFIRM'	=> '您確定要將這些 PM 檢舉結案？',
 	'CLOSE_REPORT'			=> '檢舉結案',
 	'CLOSE_REPORT_CONFIRM'	=> '您確定要將這個檢舉結案嗎？',
 	'CLOSE_REPORTS'			=> '檢舉結案',
 	'CLOSE_REPORTS_CONFIRM'	=> '您確定要將這些檢舉結案嗎？',
 
+	'DELETE_PM_REPORT'			=> '刪除 PM 檢舉',
+	'DELETE_PM_REPORT_CONFIRM'	=> '您確定要刪除這個 PM 檢舉嗎？',
+	'DELETE_PM_REPORTS'			=> '刪除 PM 檢舉',
+	'DELETE_PM_REPORTS_CONFIRM'	=> '您確定要刪除這些 PM 檢舉嗎？',
 	'DELETE_POSTS'				=> '刪除文章',
 	'DELETE_POSTS_CONFIRM'		=> '您確定要刪除這些文章嗎？',
 	'DELETE_POST_CONFIRM'		=> '您確定要刪除這篇文章嗎？',
@@ -106,6 +115,7 @@ $lang = array_merge($lang, array(
 
 	'LATEST_LOGS'				=> '最近的 5 個動作記錄',
 	'LATEST_REPORTED'			=> '最新的 5 個檢舉',
+	'LATEST_REPORTED_PMS'		=> '最新的 5 個 PM 檢舉',
 	'LATEST_UNAPPROVED'			=> '最新 5 篇等待核准的文章',
 	'LATEST_WARNING_TIME'		=> '最近發出的警告',
 	'LATEST_WARNINGS'			=> '最近的 5 個警告記錄',
@@ -170,12 +180,19 @@ $lang = array_merge($lang, array(
 
 	'MCP_POST_REPORTS'				=> '這個文章的相關檢舉',
 
-	'MCP_REPORTS'					=> '被檢舉文章',
+	'MCP_PM_REPORTS'				=> '被檢舉 PM',
+	'MCP_PM_REPORT_DETAILS'			=> 'PM 檢舉細節',
+	'MCP_PM_REPORTS_CLOSED'			=> '已結案 PM 檢舉',
+	'MCP_PM_REPORTS_CLOSED_EXPLAIN'	=> '這是所有已經解決的 PM 檢舉之列表。',
+	'MCP_PM_REPORTS_OPEN'			=> '未處理 PM 檢舉',
+	'MCP_PM_REPORTS_OPEN_EXPLAIN'	=> '這是所有尚未處理的 PM 檢舉之列表。',
+
+	'MCP_REPORTS'					=> '被檢舉訊息',
 	'MCP_REPORT_DETAILS'			=> '檢舉細節',
-	'MCP_REPORTS_CLOSED'			=> '已處理的檢舉',
-	'MCP_REPORTS_CLOSED_EXPLAIN'	=> '以下是已經處理完畢的檢舉文章。',
+	'MCP_REPORTS_CLOSED'			=> '已結案的檢舉',
+	'MCP_REPORTS_CLOSED_EXPLAIN'	=> '這是所有已經解決的檢舉文章之列表。',
 	'MCP_REPORTS_OPEN'				=> '未處理的檢舉',
-	'MCP_REPORTS_OPEN_EXPLAIN'		=> '以下是尚未處理的檢舉文章。',
+	'MCP_REPORTS_OPEN_EXPLAIN'		=> '這是所有尚未處理的檢舉文章之列表。',
 
 	'MCP_QUEUE'                        => '等待審核',
 	'MCP_QUEUE_APPROVE_DETAILS'            => '核准細節',
@@ -232,6 +249,15 @@ $lang = array_merge($lang, array(
 	'ONLY_TOPIC'			=> '只顯示主題「%s」',
 	'OTHER_USERS'			=> '其他使用這個 IP 位址發表文章的會員',
 
+	'PM_REPORT_CLOSED_SUCCESS'	=> '選擇的 PM 檢舉已經成功結案。',
+	'PM_REPORT_DELETED_SUCCESS'	=> '選擇的 PM 檢舉已經成功刪除。',
+	'PM_REPORTED_SUCCESS'		=> '這 PM 已被成功檢舉。',
+	'PM_REPORT_TOTAL'			=> '總共有 <strong>1</strong> 個 PM 檢舉需要處理。',
+	'PM_REPORTS_CLOSED_SUCCESS'	=> '選擇的 PM 檢舉已經成功結案。',
+	'PM_REPORTS_DELETED_SUCCESS'=> '選擇的 PM 檢舉已經成功刪除。',
+	'PM_REPORTS_TOTAL'			=> '總共有 <strong>%d</strong> 個 PM 檢舉需要處理。',
+	'PM_REPORTS_ZERO_TOTAL'		=> '沒有 PM 檢舉需要處理。',
+	'PM_REPORT_DETAILS'			=> 'PM 檢舉細節',
 	'POSTER'					=> '發表人',
 	'POSTS_APPROVED_SUCCESS'	=> '這些文章已經成功核准。',
 	'POSTS_DELETED_SUCCESS'		=> '這些文章已經成功刪除。',
@@ -257,14 +283,14 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> '檢舉於',
 	'REPORTS_CLOSED_SUCCESS'	=> '選擇的檢舉已經成功結案。',
 	'REPORTS_DELETED_SUCCESS'	=> '選擇的檢舉已經成功刪除。',
-	'REPORTS_TOTAL'				=> '目前共有 <strong>%d</strong> 個檢舉等待處理。',
-	'REPORTS_ZERO_TOTAL'		=> '目前沒有等待處理的檢舉。',
+	'REPORTS_TOTAL'				=> '總共有 <strong>%d</strong> 個檢舉需要處理。',
+	'REPORTS_ZERO_TOTAL'		=> '沒有檢舉需要處理。',
 	'REPORT_CLOSED'				=> '這個檢舉已經結案。',
 	'REPORT_CLOSED_SUCCESS'		=> '選擇的檢舉已經成功結案。',
 	'REPORT_DELETED_SUCCESS'	=> '選擇的檢舉已經成功刪除。',
 	'REPORT_DETAILS'			=> '檢舉詳細內容',
 	'REPORT_MESSAGE'			=> '檢舉這個文章內容',
-	'REPORT_MESSAGE_EXPLAIN'	=> '您可以使用這個表格來檢舉違反規則的私人訊息。請勿濫用此項功能。',
+	'REPORT_MESSAGE_EXPLAIN'	=> '使用這個表格來檢舉已選擇的 PM。檢舉一般僅用於該訊息違反論壇規則。<strong>檢舉 PM 將使得它的內容讓所有的版主看見。</strong>',
 	'REPORT_NOTIFY'				=> '通知我',
 	'REPORT_NOTIFY_EXPLAIN'		=> '當我的檢舉被處理後通知我。',
 	'REPORT_POST_EXPLAIN'		=> '您可以使用這個表格來檢舉違反規則的文章。請勿濫用此項功能。',
@@ -275,6 +301,7 @@ $lang = array_merge($lang, array(
 	'RETURN_MESSAGE'			=> '%s回到私人訊息%s',
 	'RETURN_NEW_FORUM'			=> '%s前往新的版面%s',
 	'RETURN_NEW_TOPIC'			=> '%s前往新的主題%s',
+	'RETURN_PM'					=> '%s回到私訊%s',
 	'RETURN_POST'				=> '%s回到文章%s',
 	'RETURN_QUEUE'				=> '%s回到審核%s',
 	'RETURN_REPORTS'			=> '%s回到檢舉%s',
@@ -301,6 +328,7 @@ $lang = array_merge($lang, array(
 	'SPLIT_TOPIC_BEYOND'				=> '從選擇的文章開始分割主題',
 	'SPLIT_TOPIC_BEYOND_CONFIRM'		=> '您確定要把選擇的文章與之後的所有文章從原來的主題中分割出來嗎？',
 	'SPLIT_TOPIC_EXPLAIN'				=> '您可以使用這個表格把主題分割為二，您可以選擇要分割的文章或是從選擇的文章開始分割。',
+	'THIS_PM_IP'				=> '這個私人訊息的 IP 位址',
 
 	'THIS_POST_IP'				=> '這篇文章的 IP 位址',
 	'TOPICS_APPROVED_SUCCESS'	=> '這些主題已經成功核准。',
@@ -346,6 +374,7 @@ $lang = array_merge($lang, array(
 	'USER_WARNING_ADDED'			=> '會員警告已經成功送出。',
 
 	'VIEW_DETAILS'			=> '檢視詳細內容',
+	'VIEW_PM'				=> '檢視私訊',
 	'VIEW_POST'				=> '檢視文章',
 
 	'WARNED_USERS'			=> '已被警告的會員',
@@ -365,10 +394,10 @@ $lang = array_merge($lang, array(
 			'OTHER'		=> '其他問題'
 		),
 		'DESCRIPTION' => array(
-			'WAREZ'		=> '這篇文章包含了不合法或違反智慧財產權法的內容或連結。',
-			'SPAM'		=> '這篇文章主要的目的是替商品或網站宣傳或是打廣告。',
-			'OFF_TOPIC'	=> '這篇文章的內容與主題無關。',
-			'OTHER'		=> '這篇文章的檢舉原因不包含在已有的項目中，請使用「更多資訊」提供更多相關資訊。'
+			'WAREZ'		=> '這則訊息包含了不合法或違反智慧財產權法的內容或連結。',
+			'SPAM'		=> '這則被檢舉訊息主要的目的是替商品或網站宣傳或是打廣告。',
+			'OFF_TOPIC'	=> '這則被檢舉訊息的內容與主題無關。',
+			'OTHER'		=> '這則被檢舉訊息的檢舉原因不適用在已有的類別中，請使用「更多資訊」欄位。'
 		)
 	),
 ));

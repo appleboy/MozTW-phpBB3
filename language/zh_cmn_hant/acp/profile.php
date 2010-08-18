@@ -4,7 +4,7 @@
 * acp_profile [正體中文]
 *
 * @package language
-* @version $Id: profile.php 9342 2009-02-26 23:46:46Z terrafrost $
+* @version $Id: profile.php 9916 2009-08-03 15:46:56Z Kellanved $
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -66,7 +66,9 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> '會員可以在會員控制台中更改這個個人資料欄位。',
 	'DISPLAY_AT_REGISTER'			=> '顯示在註冊的頁面',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> '如果啟用這個選項，那麼在註冊時會顯示此欄位。',
-	'DISPLAY_PROFILE_FIELD'			=> '公開顯示個人資料欄位',
+	'DISPLAY_ON_VT'					=> '顯示在文章頁面',
+	'DISPLAY_ON_VT_EXPLAIN'			=> '如果啟用這個選項，那麼此欄位將顯示在主題頁面的迷你-個人資料中。',
+	'DISPLAY_PROFILE_FIELD'			=> '公開地顯示個人資料欄位',
 	'DISPLAY_PROFILE_FIELD_EXPLAIN'	=> '個人資料欄位將會顯示在「負荷設定」中允許的所有位置。如果設定為「否」，那麼這筆資料將不會顯示在主題頁面、個人資料以及會員列表中。',
 	'DROPDOWN_ENTRIES_EXPLAIN'		=> '現在輸入您的選項，每一個選項一行。',
 

@@ -4,7 +4,7 @@
 * install [正體中文]
 *
 * @package language
-* @version $Id: install.php 9508 2009-05-03 11:18:08Z acydburn $
+* @version $Id: install.php 10101 2009-09-04 14:49:41Z acydburn $
 * @copyright (c) 2001 - 2007 phpBB TW Group (yoshika, 心靈捕手, 動機不明)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -31,7 +31,7 @@ if (empty($lang) || !is_array($lang))
 // 'Page %s of %s' you can (and should) write 'Page %1$s of %2$s', this allows
 // translators to re-order the output of data while ensuring it remains correct
 //
-// You do not need this where single placeholders are used, e.g.'Message %d' is fine
+// You do not need this where single placeholders are used, e.g. 'Message %d' is fine
 // equally where a string contains only two placeholders which are used to wrap text
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
@@ -133,6 +133,7 @@ $lang = array_merge($lang, array(
 	'DB_PASSWORD'				=> '資料庫管理員密碼',
 	'DB_PORT'					=> '資料庫伺服器連接埠',
 	'DB_PORT_EXPLAIN'			=> '不用填寫，除非您確定伺服器使用一個非標準連接埠。',
+	'DB_UPDATE_NOT_SUPPORTED'	=> '很抱歉！這 script 不支援從以前的 phpBB 版本更新到「%1$s」。您目前已安裝的版本是「%2$s」。運行這 script 之前，請更新到以前的版本。在 phpBB.com 的支援論壇可提供援助。',
 	'DB_USERNAME'				=> '資料庫管理員名稱',
 	'DB_TEST'					=> '連線測試',
 	'DEFAULT_LANG'				=> '預設討論區語言',
@@ -166,6 +167,9 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>必須的</strong> - 為了正常運行，phpBB 需要針對特定檔案或資料夾的寫入權限。如果下面出現「不存在」，您就需要建立相關的檔案或資料夾；如果出現「不可寫入」，您就需要改變相關的檔案或資料夾的權限來允許 phpBB 對其進行寫入操作。',
 	'FILLING_TABLE'				=> '正在填充表格：<strong>%s</strong>',
 	'FILLING_TABLES'			=> '正在填充表格',
+
+	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB 不再支援 Firebird/Interbase 2.1 以前版本。在執行更新之前，請更新您的 Firebird 版本至少是 2.1.0 。',
+
 	'FINAL_STEP'				=> '正在執行最後一步',
 	'FORUM_ADDRESS'				=> '討論區位址',
 	'FORUM_ADDRESS_EXPLAIN'		=> '這是指向您的舊討論區根目錄的連結位址，例如：<samp>http://www.example.com/phpBB2/</samp>。如果您不留白而填入了一個位址，那麼該位址所有的文章、私人訊息及簽名檔都將被替換為新的討論區位址。',
@@ -179,16 +183,16 @@ $lang = array_merge($lang, array(
 	'FTP_UPLOAD'				=> '上傳',
 
 	'GPL'						=> 'General Public License',
-	
+
 	'INITIAL_CONFIG'			=> '基本設定',
 	'INITIAL_CONFIG_EXPLAIN'	=> '安裝程式認為您的伺服器可以運行 phpBB，您需要補充一些明確的資訊。如果您不知道如何連接您的資料庫，請首先考慮聯絡您的主機供應商（如前例），或是訪問 phpBB 支援討論區。在繼續下一步之前，請仔細檢查您輸入的訊息。',
 	'INSTALL_CONGRATS'			=> '恭喜！',
 	'INSTALL_CONGRATS_EXPLAIN'	=> '
-		<p>您已經成功安裝 phpBB %1$s。從這裡，您有兩個方式可以設定您新安裝的 phpBB3：</p>
+		您已經成功安裝 phpBB %1$s。請繼續選擇以下其中一個選項：</p>
 		<h2>轉換一個已經存在的討論區到 phpBB3</h2>
 		<p>phpBB 轉換架構支援從 phpBB 2.0.x 和其他討論區軟體到 phpBB3 的轉換。如果您有一個舊的討論區需要轉換，請 <a href="%2$s">運行轉換程式</a>。</p>
 		<h2>使用您的 phpBB3！</h2>
-		<p>點選下面的連結將帶您到管理員控制台（ACP）。花一些時間檢查設定的選項是否可用。請記得 phpBB 的線上使用說明位於 <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation（使用說明文件）</a> 和 <a href="http://www.phpbb.com/community/viewforum.php?f=46">3.0.x Support Forum（技術支援版面）</a>，檢視 <a href="%3$s">README</a> 以得到更多的訊息。</p><p><strong>請在使用討論區前刪除，移動或重新命名 install 資料夾。如果這個資料夾存在，那麼只有管理員控制台（ACP）才允許使用。</strong></p>',
+		<p>點選下面的連結，將帶您到管理員控制台（ACP）中，提交統計資料到 phpBB 的表格。如果您幫助我們寄送那資訊，那麼我們將不勝感激。之後，您應該花些時間去測試一些對您有用的選項。請記得 phpBB 的線上使用說明位於 <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation（使用說明文件）</a> 和 <a href="http://www.phpbb.com/community/viewforum.php?f=46">Support Forum（技術支援版面）</a>。</p><p><strong>請在使用您的討論區前刪除、移動或重新命名 /install/ 資料夾。如果這個資料夾存在，那麼只有管理員控制台（ACP）才允許使用。</strong>',
 	'INSTALL_INTRO'				=> '歡迎安裝！',
 
 	'INSTALL_INTRO_BODY'		=> '使用這個選項，應該可以在您的伺服器上安裝 phpBB。</p><p>為了繼續安裝，您需要知道您的資料庫設定。如果您不清楚這些，請聯絡您的網站空間提供者。沒有這些訊息安裝將不能繼續。您需要：</p>
@@ -208,11 +212,11 @@ $lang = array_merge($lang, array(
 		<li>MySQL 3.23 或更高 (支援MySQLi)</li>
 		<li>PostgreSQL 7.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.0+</li>
+		<li>Firebird 2.1+</li>
 		<li>MS SQL Server 2000 或更高（直接訪問或通過 ODBC）</li>
 		<li>Oracle</li>
 	</ul>
-	
+
 	<p>只有您的伺服器支援的資料庫才會被顯示。',
 	'INSTALL_INTRO_NEXT'		=> '要開始安裝，點選下面的按鈕。',
 	'INSTALL_LOGIN'				=> '登入討論區',
@@ -230,7 +234,7 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_MYSQLI'		=> '伺服器內安裝的 MySQL 版本與您選擇的「MySQL with MySQLi Extension」選項不相容，請嘗試「MySQL」選項。',
 	'INST_ERR_DB_NO_SQLITE'		=> '您安裝的 SQLite 版本太舊，請升級到至少 2.8.2 版。',
 	'INST_ERR_DB_NO_ORACLE'		=> '伺服器內安裝的 Oracle 版本需要您將參數 <var>NLS_CHARACTERSET</var> 設定為 <var>UTF8</var>。請設定此參數，或將 Oracle 升級到至少 9.2 版。',
-	'INST_ERR_DB_NO_FIREBIRD'	=> '您安裝的 Firebird 版本太舊，請升級到至少 2.0 版。',
+	'INST_ERR_DB_NO_FIREBIRD'	=> '您安裝的 Firebird 版本太舊，請升級到至少 2.1 版。',
 	'INST_ERR_DB_NO_FIREBIRD_PS'=> '您為 Firebird 選擇的資料庫的頁面容量小於 8192，它必須至少為 8192。',
 	'INST_ERR_DB_NO_POSTGRES'	=> '您選擇的資料庫不是 <var>UNICODE</var> 或 <var>UTF8</var> 編碼，請使用 <var>UNICODE</var> 或 <var>UTF8</var> 編碼的資料庫。',
 	'INST_ERR_DB_NO_NAME'		=> '沒有指定資料庫名稱。',
@@ -364,7 +368,7 @@ $lang = array_merge($lang, array(
 
 // Updater
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> '所有的檔案都已經升級到最新版本。現在您應該 <a href="../ucp.php?mode=login">登入到討論區</a> 並檢查系統是否正常工作。不要忘記刪除、重新命名或移動 install 資料夾！',
+	'ALL_FILES_UP_TO_DATE'		=> '所有的檔案都已經升級到最新版本。現在您應該 <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">登入到討論區</a> 並檢查系統是否正常工作。不要忘記刪除、重新命名或移動 /install/ 資料夾！請從您的 ACP 模組中的 <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">發送統計資訊</a> 發送有關您的伺服器以及論壇設定之更新資訊給我們。',
 	'ARCHIVE_FILE'				=> '原始檔案',
 
 	'BACK'				=> '後退',
@@ -447,8 +451,8 @@ $lang = array_merge($lang, array(
 
 	'MERGE_NO_MERGE_NEW_OPTION'	=> '不要合併 - 使用新檔案',
 	'MERGE_NO_MERGE_MOD_OPTION'	=> '不要合併 - 使用目前安裝的檔案',
-	'MERGE_MOD_FILE_OPTION'		=> '合併修改 (放任在衝突區塊內新的 phpBB 代碼)',
-	'MERGE_NEW_FILE_OPTION'		=> '合併修改 (放任在衝突區塊內已修改過的代碼)',
+	'MERGE_MOD_FILE_OPTION'		=> '合併修改 (移除在衝突區塊內新的 phpBB 代碼)',
+	'MERGE_NEW_FILE_OPTION'		=> '合併修改 (移除在衝突區塊內已修改過的代碼)',
 	'MERGE_SELECT_ERROR'		=> '沒有正確地選擇衝突檔案的合併方式。',
 	'MERGING_FILES'				=> '正在合併不同之處',
 	'MERGING_FILES_EXPLAIN'		=> '現在正收集最後所需要改變的檔案<br /><br />請稍候，直到 phpBB 將所有已改變的檔案處理完成。',
@@ -560,11 +564,12 @@ $lang = array_merge($lang, array(
 	'USER_INACTIVE'					=> '帳號尚未啟用的會員',
 
 	'VERSION_CHECK'				=> '版本檢查',
-	'VERSION_CHECK_EXPLAIN'		=> '檢查您目前運行的討論區是否是最新版本。',
-	'VERSION_NOT_UP_TO_DATE'	=> '您的討論區版本不是最新的，請繼續更新過程。',
-	'VERSION_NOT_UP_TO_DATE_ACP'=> '您的討論區版本不是最新的。<br />下面是最新版本的發佈公告和如何執行更新的連結。',
-	'VERSION_UP_TO_DATE'		=> '您的版本是最新的，沒有可用的更新。無論如何您可繼續執行檔案的有效性檢查。',
-	'VERSION_UP_TO_DATE_ACP'	=> '您的版本是最新的，沒有可用的更新。您不需要更新您的安裝。',
+	'VERSION_CHECK_EXPLAIN'		=> '檢查您安裝的討論區是否是最新版本。',
+	'VERSION_NOT_UP_TO_DATE'	=> '您您安裝的討論區不是最新的，請繼續更新過程。',
+	'VERSION_NOT_UP_TO_DATE_ACP'=> '您安裝的討論區不是最新的。<br />下面連結是最新版本的釋出公告，它包含更多的更新說明之資訊。',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> '您安裝的討論區不是最新的。',
+	'VERSION_UP_TO_DATE'		=> '您安裝的討論區是最新的，雖然此時沒有可用的更新，但是您可繼續執行檔案的有效性檢查。',
+	'VERSION_UP_TO_DATE_ACP'	=> '您安裝的討論區是最新的，此時沒有可用的更新。',
 	'VIEWING_FILE_CONTENTS'		=> '檢視檔案內容',
 	'VIEWING_FILE_DIFF'			=> '檢視檔案差異',
 

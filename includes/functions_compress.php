@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB3
-* @version $Id: functions_compress.php 8780 2008-08-22 12:52:48Z acydburn $
+* @version $Id$
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -80,6 +80,11 @@ class compress
 				}
 			}
 		}
+		else
+		{
+			// $src does not exist
+			return false;
+		}
 
 		return true;
 	}
@@ -89,6 +94,11 @@ class compress
 	*/
 	function add_custom_file($src, $filename)
 	{
+		if (!file_exists($src))
+		{
+			return false;
+		}
+
 		$this->data($filename, file_get_contents($src), false, stat($src));
 		return true;
 	}
@@ -155,7 +165,12 @@ class compress_zip extends compress
 	*/
 	function compress_zip($mode, $file)
 	{
-		return $this->fp = @fopen($file, $mode . 'b');
+		$this->fp = @fopen($file, $mode . 'b');
+
+		if (!$this->fp)
+		{
+			trigger_error('Unable to open file ' . $file . ' [' . $mode . 'b]');
+		}
 	}
 
 	/**

@@ -4,7 +4,7 @@
 * acp_users [正體中文]
 *
 * @package language
-* @version $Id: users.php 8479 2008-03-29 00:22:48Z naderman $
+* @version $Id: users.php 9767 2009-07-17 11:27:50Z toonarmy $
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -77,6 +77,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> '請選擇您想要移動這個會員發表的所有文章的版面。',
 
 	'NO_SPECIAL_RANK'		=> '沒有指派特殊等級',
+	'NO_WARNINGS'			=> '沒有警告。',
 	'NOT_MANAGE_FOUNDER'	=> '您在嘗試管理具有創始人地位的會員。只有創始人被允許管理其他創始人。',
 
 	'QUICK_TOOLS'			=> '快速工具',
@@ -102,21 +103,28 @@ $lang = array_merge($lang, array(
 	'USER_ADMIN_DEACTIVED'	=> '停用帳號成功。',
 	'USER_ADMIN_DEL_ATTACH'	=> '刪除所有附加檔案',
 	'USER_ADMIN_DEL_AVATAR'	=> '刪除頭像',
+	'USER_ADMIN_DEL_OUTBOX'			=> '清空 PM 寄件夾',
 	'USER_ADMIN_DEL_POSTS'	=> '刪除所有文章',
 	'USER_ADMIN_DEL_SIG'	=> '刪除簽名檔',
 	'USER_ADMIN_EXPLAIN'	=> '在這裡，您可以改變會員資訊以及某個特別的選項。要修改會員權限請使用會員以及群組的權限系統。',
 	'USER_ADMIN_FORCE'	=> '強迫再啟用',
+	'USER_ADMIN_LEAVE_NR'			=> '從新註冊會員移除',
 	'USER_ADMIN_MOVE_POSTS'	=> '移動所有文章',
 	'USER_ADMIN_SIG_REMOVED'	=> '刪除會員簽名檔成功。',
 	'USER_ATTACHMENTS_REMOVED'	=> '移除這個會員發表的所有附加檔案成功。',
+	'USER_AVATAR_NOT_ALLOWED'		=> '頭像無法顯示，因為頭像不被允許。',
 	'USER_AVATAR_UPDATED'	=> '更新會員頭像細節成功。',
+	'USER_AVATAR_TYPE_NOT_ALLOWED'	=> '目前的頭像無法顯示，因為它的類型不被允許。',
 	'USER_CUSTOM_PROFILE_FIELDS'	=> '自訂個人資料欄位',
 	'USER_DELETED'	=> '會員刪除成功。',
 	'USER_GROUP_ADD'	=> '增加會員到群組',
 	'USER_GROUP_NORMAL'				=> '普通群組的會員',
 	'USER_GROUP_PENDING'			=> '群組會員為等待審核模式',
 	'USER_GROUP_SPECIAL'			=> '特殊群組的會員',
+	'USER_LIFTED_NR'				=> '已成功移除會員的新註冊會員身份。',
 	'USER_NO_ATTACHMENTS'			=> '沒有可顯示的附加檔案。',
+	'USER_OUTBOX_EMPTIED'			=> '已成功清空會員的 PM 寄件夾。',
+	'USER_OUTBOX_EMPTY'				=> '會員的 PM 寄件夾已經清空。',
 	'USER_OVERVIEW_UPDATED'			=> '會員細節更新成功。',
 	'USER_POSTS_DELETED'			=> '這個會員發表的所有文章移除成功。',
 	'USER_POSTS_MOVED'				=> '移動會員的文章到目標版面成功。',
@@ -126,6 +134,7 @@ $lang = array_merge($lang, array(
 	'USER_RANK'	=> '會員等級',
 	'USER_RANK_UPDATED'	=> '會員等級已更新。',
 	'USER_SIG_UPDATED'	=> '會員簽名檔更新成功。',
+	'USER_WARNING_LOG_DELETED'		=> '沒有可用的資訊。很可能是記錄已經被刪除。',
 	'USER_TOOLS'	=> '基本工具',
 ));
 

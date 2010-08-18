@@ -4,7 +4,7 @@
 * acp_ban [正體中文]
 *
 * @package language
-* @version $Id: ban.php,v 1.19 2007/10/04 15:07:24 acydburn Exp $
+* @version $Id: ban.php 9727 2009-07-07 13:33:53Z nickvergessen $
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -48,6 +48,8 @@ $lang = array_merge($lang, array(
 	'BAN_REASON'			=> '封鎖理由',
 	'BAN_GIVE_REASON'		=> '顯示封鎖理由',
 	'BAN_UPDATE_SUCCESSFUL'	=> '封鎖列表更新成功',
+	'BANNED_UNTIL_DATE'		=> '直到 %s', // 例如：「直到 Mon 13.Jul.2009, 14:44」
+	'BANNED_UNTIL_DURATION'	=> '%1$s (直到 %2$s)', // 例如：「7 days (直到 Tue 14.Jul.2009, 14:44)」
 
 	'EMAIL_BAN'					=> '封鎖一個或更多個 e-mail 位址',
 	'EMAIL_BAN_EXCLUDE_EXPLAIN'	=> '啟用這個功能由所有目前的封鎖中排除已輸入的 e-mail 位址。',
@@ -67,7 +69,7 @@ $lang = array_merge($lang, array(
 	'LENGTH_BAN_INVALID'		=> '日期格式必須是 <kbd>YYYY-MM-DD</kbd>。',
 
 	'PERMANENT'		=> '永久的',
-	
+
 	'UNTIL'						=> '直到',
 	'USER_BAN'					=> '封鎖一個或更多個會員名稱',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> '啟用這個功能由所有目前的封鎖中排除已輸入的會員名稱。',
@@ -75,8 +77,6 @@ $lang = array_merge($lang, array(
 	'USER_NO_BANNED'			=> '沒有封鎖的會員名稱',
 	'USER_UNBAN'				=> '解除封鎖或解除排除的會員名稱',
 	'USER_UNBAN_EXPLAIN'		=> '您可以使用適當的滑鼠與鍵盤的結合，一次選擇多個會員名稱，執行解除封鎖或解除排除的操作。排除的會員名稱有特別背景標示。',
-	
-
 ));
 
 ?>

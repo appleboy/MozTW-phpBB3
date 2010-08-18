@@ -3,7 +3,7 @@
 * acp_permissions_phpbb (phpBB Permission Set) [正體中文]
 *
 * @package language
-* @version $Id: permissions_phpbb.php 8911 2008-09-23 13:03:33Z acydburn $
+* @version $Id: permissions_phpbb.php 9686 2009-06-26 11:52:54Z rxu $
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 */
@@ -123,8 +123,8 @@ $lang = array_merge($lang, array(
 	'acl_u_pm_download'	=> array('lang' => '可以在私人訊息中下載附加檔案', 'cat' => 'pm'),
 	'acl_u_pm_bbcode'	=> array('lang' => '可以在私人訊息中使用 BBCode', 'cat' => 'pm'),
 	'acl_u_pm_smilies'	=> array('lang' => '可以在私人訊息中使用表情符號', 'cat' => 'pm'),
-	'acl_u_pm_img'		=> array('lang' => '可以在私人訊息中發表圖片', 'cat' => 'pm'),
-	'acl_u_pm_flash'	=> array('lang' => '可以在私人訊息中發表 Flash 動畫', 'cat' => 'pm'),
+	'acl_u_pm_img'		=> array('lang' => '可以在私人訊息中使用 [img] BBCode', 'cat' => 'pm'),
+	'acl_u_pm_flash'	=> array('lang' => '可以在私人訊息中使用 [flash] BBCode', 'cat' => 'pm'),
 
 	'acl_u_sendemail'	=> array('lang' => '可以發送 e-mail', 'cat' => 'misc'),
 	'acl_u_sendim'		=> array('lang' => '可以發送即時訊息', 'cat' => 'misc'),
@@ -153,8 +153,8 @@ $lang = array_merge($lang, array(
 	'acl_f_sigs'		=> array('lang' => '可以使用簽名檔', 'cat' => 'content'),
 	'acl_f_bbcode'		=> array('lang' => '可以在文章中使用 BBCode', 'cat' => 'content'),
 	'acl_f_smilies'		=> array('lang' => '可以在文章中使用表情符號', 'cat' => 'content'),
-	'acl_f_img'			=> array('lang' => '可以在文章中發表圖片', 'cat' => 'content'),
-	'acl_f_flash'		=> array('lang' => '可以在文章中發表 Flash 動畫', 'cat' => 'content'),
+	'acl_f_img'			=> array('lang' => '可以在文章中使用 [img] BBCode', 'cat' => 'content'),
+	'acl_f_flash'		=> array('lang' => '可以在文章中使用 [flash] BBCode', 'cat' => 'content'),
 
 	'acl_f_edit'		=> array('lang' => '可以編輯自己的文章', 'cat' => 'actions'),
 	'acl_f_delete'		=> array('lang' => '可以刪除自己的文章', 'cat' => 'actions'),
@@ -217,7 +217,7 @@ $lang = array_merge($lang, array(
 	'acl_a_ban'			=> array('lang' => '可以管理封鎖', 'cat' => 'user_group'),
 
 	'acl_a_viewauth'	=> array('lang' => '可以檢視權限遮罩', 'cat' => 'permissions'),
-	'acl_a_authgroups'	=> array('lang' => '可以修改個別的群組權限', 'cat' => 'permissions'),
+	'acl_a_authgroups'	=> array('lang' => '可以使用其他權限', 'cat' => 'permissions'),
 	'acl_a_authusers'	=> array('lang' => '可以修改個別的會員權限', 'cat' => 'permissions'),
 	'acl_a_fauth'		=> array('lang' => '可以修改版面權限階級', 'cat' => 'permissions'),
 	'acl_a_mauth'		=> array('lang' => '可以修改版主權限階級', 'cat' => 'permissions'),

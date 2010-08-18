@@ -4,7 +4,7 @@
 * acp_posting [正體中文]
 *
 * @package language
-* @version $Id: posting.php 9375 2009-03-16 16:47:16Z acydburn $
+* @version $Id: posting.php 10517 2010-02-21 11:35:45Z Kellanved $
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -40,6 +40,8 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'ACP_BBCODES_EXPLAIN'		=> 'BBCode 是一種特殊的 HTML 簡易使用方式，它可以提供有效的控制各種頁面效果的顯示。在這裡，您可以增加/移除/編輯自行定義 BBCode。',
 	'ADD_BBCODE'				=> '增加 BBCode',
+	'BBCODE_DANGER'				=> '您嘗試新增的 BBCode 似乎是使用 {TEXT} 標記在 HTML 語法。這很有可能發生 XSS 安全問題。試試使用更多限制的 {SIMPLETEXT} 或 {INTTEXT} 型式取代。如果您瞭解潛在的風險，以及認為絕對無法避免使用 {TEXT} 的話，那麼繼續執行它。',
+	'BBCODE_DANGER_PROCEED'		=> '繼續執行', //'I understand the risk',
 
 	'BBCODE_ADDED'				=> 'BBCode 增加成功。',
 	'BBCODE_EDITED'				=> 'BBCode 編輯成功。',
@@ -48,6 +50,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_HELPLINE_EXPLAIN'	=> '這個欄位的內容會在滑鼠移過 BBCode 文字時顯示。',
 	'BBCODE_HELPLINE_TEXT'		=> '提示內容',
 	'BBCODE_HELPLINE_TOO_LONG'	=> '您輸入的提示內容太長。',
+
 	'BBCODE_INVALID_TAG_NAME'	=> '您所選擇的 BBCode 標籤名稱已經存在。',
 	'BBCODE_INVALID'			=> '您的 BBCode 結構是無效的形式。',
 	'BBCODE_OPEN_ENDED_TAG'		=> '您自行定義的 BBCode 必須包含開始和結束標籤。',
@@ -67,17 +70,18 @@ $lang = array_merge($lang, array(
 
 	'TOKEN'					=> '標誌符號',
 	'TOKENS'				=> '標誌符號',
-	'TOKENS_EXPLAIN'		=> '標誌符號是會員所輸入的佔位符號。只有當輸入者符合相關定義時才會生效。如果需要的話，您可以在最後一個字元後增加數字加以編號區隔，例如：{TEXT1}、{TEXT2}。<br /><br />除了這些標誌符號外您可以使用任何語系檔中的任何字元串，例如：{L_<em>&lt;STRINGNAME&gt;</em>} 這裡的 <em>&lt;STRINGNAME&gt;</em> 就是您希望增加的翻譯後的字元串的名稱。例如，{L_WROTE} 將被顯示為「wrote」或者是會員的當地語言。<br /><br /><strong>請注意！自行定義 BBCodes 只有下面列表的標誌符號可以使用。</strong>',
+	'TOKENS_EXPLAIN'		=> '標誌符號是會員所輸入的佔位符號。只有當輸入者符合相關定義時才會生效。如果需要的話，您可以在最後一個字元後增加數字加以編號區隔，例如：{TEXT1}、{TEXT2}。<br /><br />在 HTML 替換代碼中，您可以使用目前在 /language/ 資料夾裡的任何字元串，例如：{L_<em>&lt;STRINGNAME&gt;</em>} 這裡的 <em>&lt;STRINGNAME&gt;</em> 就是您希望增加的翻譯後的字元串的名稱。例如，{L_WROTE} 將被顯示為「wrote」或者是會員的當地語言。<br /><br /><strong>請注意！自行定義 BBCodes 只有下面列表的標誌符號可以使用。</strong>',
 	'TOKEN_DEFINITION'		=> '它能是什麼？',
 	'TOO_MANY_BBCODES'		=> '您不能建立更多的 BBCodes。請先移除一個或更多個 BBCode 後再試試。',
 
 	'tokens'	=>	array(
-		'TEXT'			=> '任何文字，包括外國文字、數字、...等。您不該在 HTML 標籤中使用這個標誌符號，試試使用 IDENTIFIER 或 SIMPLETEXT。',
+		'TEXT'			=> '任何文字，包括外國文字、數字、...等。您不該在 HTML 標籤中使用這個標誌符號，試試使用 IDENTIFIER、INTTEXT 或 SIMPLETEXT。',
 		'SIMPLETEXT'	=> '包含拉丁文字母表 (A-Z)、數字、空格、逗點、小數點、減號、加號、連字號以及底線等字元。',
+		'INTTEXT'		=> '萬國碼字母字元、數字、空格、逗點、小數點、減號、加號、連字號以及底線等字元。',
 		'IDENTIFIER'	=> '包含拉丁文字母表 (A-Z)、數字、連字號以及底線等字元。',
 		'NUMBER'		=> '任何數字序列',
 		'EMAIL'			=> '有效的 e-mail 位址',
-		'URL'			=> '使用任何通訊協議的有效的 URL (如 http、ftp、...等，但不能使用 javascript 功能)。如果沒有提供，將將自動以 &quot;http://&quot; 當作開頭。',
+		'URL'			=> '使用任何通訊協議的有效的 URL (如 http、ftp、...等，但不能使用 javascript 功能)。如果沒有提供，將將自動以「http://」當作字符串的開頭。',
 		'LOCAL_URL'		=> '本地的 URL。URL 必須和主題頁相關，並且不能包含伺服器名稱或通訊協議。',
 		'COLOR'			=> 'HTML 顏色，可以是 3 組十六進位數格式，例如：<samp>#FF1234</samp>，或者是 <a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-color">CSS 顏色關鍵字</a>，例如：<samp>fuchsia</samp> 或 <samp>InactiveBorder</samp>。'
 	)
@@ -179,6 +183,8 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> '表情符號圖案',
 	'SMILIES_WIDTH'				=> '表情符號寬度',
 
+	'TOO_MANY_SMILIES'			=> '已達到 %d 個表情符號的限制。',
+
 	'WRONG_PAK_TYPE'	=> '指定的檔案包中沒有包含合適的資料。',
 ));
 
@@ -216,6 +222,7 @@ $lang = array_merge($lang, array(
 	'RANK_ADDED'			=> '等級增加成功。',
 	'RANK_IMAGE'			=> '等級圖示',
 	'RANK_IMAGE_EXPLAIN'	=> '使用它闡釋代表等級的小圖檔。路徑為 phpBB 根目錄的相對路徑。',
+	'RANK_IMAGE_IN_USE'		=> '(使用中)',
 	'RANK_MINIMUM'			=> '最少文章數量',
 	'RANK_REMOVED'			=> '等級刪除成功。',
 	'RANK_SPECIAL'			=> '設定為特殊等級',

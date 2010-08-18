@@ -4,7 +4,7 @@
 * acp_permissions [正體中文]
 *
 * @package language
-* @version $Id: permissions.php 8479 2008-03-29 00:22:48Z naderman $
+* @version $Id: permissions.php 10017 2009-08-18 14:37:49Z bantu $
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -80,6 +80,7 @@ $lang = array_merge($lang, array(
 	'ACP_ADMINISTRATORS_EXPLAIN'				=> '在這裡，您可以指派管理員權限給會員或群組。所有擁有管理員權限的會員都能看到管理員控制台。',
 	'ACP_FORUM_MODERATORS_EXPLAIN'				=> '在這裡，您可以指派會員和群組為版主。請使用其他適當的頁面設定會員使用版面的權限、全域版主或管理員。',
 	'ACP_FORUM_PERMISSIONS_EXPLAIN'				=> '在這裡，您可以更改哪些會員和群組可以使用哪些版面。指派版主或管理員請使用其他適當的頁面。',
+	'ACP_FORUM_PERMISSIONS_COPY_EXPLAIN'		=> '在這裡，您可以複製權限，自一個版面到一個或更多其他的版面。',
 	'ACP_GLOBAL_MODERATORS_EXPLAIN'				=> '在這裡，您可以指派全域版主權限給會員或群組。這些版主擁有一般的版主權限，此外他們可以使用討論區的每個版面。',
 	'ACP_GROUPS_FORUM_PERMISSIONS_EXPLAIN'		=> '在這裡，您可以設定群組的版面權限。',
 	'ACP_GROUPS_PERMISSIONS_EXPLAIN'			=> '在這裡，您可以將全域權限指派給群組 - 會員權限、全域版主權限和管理員權限。會員權限包含使用頭像、發送私人訊息等；全域版主權限包含核准文章、管理主題、管理封鎖等；而最後管理員權限包含更改權限、定義慣用 BBCode、管理版面等等。只有在少數的情況下才需要單獨地改變會員權限設定，推薦的方式是先將會員歸類到不同的群組，再賦予群組不同的權限。',
@@ -108,6 +109,12 @@ $lang = array_merge($lang, array(
 	'APPLY_PERMISSIONS'			=> '更新權限',
 	'APPLY_PERMISSIONS_EXPLAIN'	=> '為某個項目所設定的權限和角色，將只被更新到某個項目和所有已選擇的項目。',
 	'AUTH_UPDATED'				=> '權限已經更新。',
+
+	'COPY_PERMISSIONS_CONFIRM'				=> '您確定要進行這項行動？請知道：這將覆蓋所選擇目標，其任何已經存在的權限。',
+	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> '您想要複製權限的來源版面。.',
+	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> '您想要複製權限的目標版面。',
+	'COPY_PERMISSIONS_FROM'					=> '複製權限自',
+	'COPY_PERMISSIONS_TO'					=> '複製權限到',
 
 	'CREATE_ROLE'				=> '建立角色',
 	'CREATE_ROLE_FROM'			=> '使用設定從...',
@@ -164,6 +171,7 @@ $lang = array_merge($lang, array(
 	'ROLE_FORUM_POLLS'			=> '標準使用 + 投票',
 	'ROLE_FORUM_READONLY'		=> '只能閱讀',
 	'ROLE_FORUM_STANDARD'		=> '標準使用',
+	'ROLE_FORUM_NEW_MEMBER'		=> '新註冊會員',
 	'ROLE_MOD_FULL'				=> '完全版主',
 	'ROLE_MOD_QUEUE'			=> '審核版主',
 	'ROLE_MOD_SIMPLE'			=> '簡單版主',
@@ -173,6 +181,8 @@ $lang = array_merge($lang, array(
 	'ROLE_USER_NOAVATAR'		=> '沒有頭像',
 	'ROLE_USER_NOPM'			=> '沒有私人訊息',
 	'ROLE_USER_STANDARD'		=> '標準功能',
+	'ROLE_USER_NEW_MEMBER'		=> '新註冊會員',
+
 
 	'ROLE_DESCRIPTION_ADMIN_FORUM'			=> '可以行使版面管理和版面權限設定。',
 	'ROLE_DESCRIPTION_ADMIN_FULL'			=> '擁有行使這個討論區的所有管理員功能。<br />不建議使用。',
@@ -187,6 +197,7 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_FORUM_POLLS'			=> '和標準使用一樣，但是可以建立投票。',
 	'ROLE_DESCRIPTION_FORUM_READONLY'		=> '可以閱讀版面，但是不能建立主題或回覆文章。',
 	'ROLE_DESCRIPTION_FORUM_STANDARD'		=> '可以使用大部份的版面功能，包括發表附加檔案和刪除自己的主題，但是不能鎖定、也不能建立投票。',
+	'ROLE_DESCRIPTION_FORUM_NEW_MEMBER'		=> '新註冊會員群組的組員之角色；包含針對新會員鎖定功能之 <samp>從未</samp> 權限。',
 	'ROLE_DESCRIPTION_MOD_FULL'				=> '可以使用所用版主功能，包括封鎖。',
 	'ROLE_DESCRIPTION_MOD_QUEUE'			=> '可以審核和編輯文章，但是沒有其他權限。',
 	'ROLE_DESCRIPTION_MOD_SIMPLE'			=> '只可以使用基本的主題操作。不能發送警告或審核文章。',
@@ -196,6 +207,7 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_USER_NOAVATAR'		=> '有限的功能設定，以及不允許使用頭像功能。',
 	'ROLE_DESCRIPTION_USER_NOPM'			=> '有限的功能設定，以及不允許使用私人訊息。',
 	'ROLE_DESCRIPTION_USER_STANDARD'		=> '可以行使大部份但不是全部的會員功能，例如不能更改會員名稱、或受灌水間隔限制。',
+	'ROLE_DESCRIPTION_USER_NEW_MEMBER'		=> '特別的新註冊會員群組組員之角色；包含針對新會員鎖定功能之 <samp>從未</samp> 權限。',
 
 	'ROLE_DESCRIPTION_EXPLAIN'		=> '您可以輸入一個關於這個角色的用途或意義的簡短解釋。您這裡輸入的文字也會顯示在權限頁面上。',
 	'ROLE_DESCRIPTION_LONG'			=> '角色描述太長，請限制在 4000 個字元內。',
@@ -241,7 +253,7 @@ $lang = array_merge($lang, array(
 	'TRACE_USER_GLOBAL_YES_TOTAL_NEVER'		=> '這個版面獨立的會員權限設定值為 <samp>是</samp> 這將覆蓋目前的本地結果 <samp>從不</samp>。%s追蹤全域權限%s',
 	'TRACE_USER_GLOBAL_NEVER_TOTAL_KEPT'	=> '這個版面獨立的會員權限設定值為 <samp>從不</samp> 這對於本地權限沒有影響。%s追蹤全域權限%s',
 
-	'TRACE_USER_FOUNDER'					=> '這個會員屬於創始人，因此管理員權限預設為 <samp>是</samp>。',
+	'TRACE_USER_FOUNDER'					=> '此會員是創始人，因此其管理員權限總是設定為 <samp>是</samp>。',
 	'TRACE_USER_KEPT'						=> '這個會員權限是 <samp>否</samp> 所以保留全部的舊值。',
 	'TRACE_USER_KEPT_LOCAL'					=> '這個會員關於這個版面的權限是 <samp>否</samp> 所以保留全部的舊值。',
 	'TRACE_USER_NEVER_TOTAL_NEVER'			=> '這個會員權限設定為 <samp>從不</samp> 以及全部的值設定為 <samp>從不</samp>，所以沒有變化。',
