@@ -83,6 +83,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_SIG_LINKS_EXPLAIN'	=> '如果不允許，那麼 <code>[URL]</code> BBCode 標籤以及超連結網址是無法使用的。',
 	'ALLOW_SIG_SMILIES'			=> '允許在會員簽名檔中使用表情符號',
 	'ALLOW_SMILIES'				=> '允許使用表情符號',
+	'ALLOW_SIG_NOFOLLOW' => '增加會員簽名檔中網址連結設定 rel="nofollow"',
 	'ALLOW_TOPIC_NOTIFY'		=> '允許訂閱主題',
 	'BOARD_PM'					=> '私人訊息',
 	'BOARD_PM_EXPLAIN'			=> '開啟或關閉所有的會員使用私人訊息。',
@@ -200,6 +201,8 @@ $lang = array_merge($lang, array(
 	'MAX_SIG_SMILIES_EXPLAIN'		=> '會員簽名檔中允許的最多表情符號數量。設定為 0，表示沒有限制。',
 	'MAX_SIG_URLS'					=> '簽名檔中的最多連結',
 	'MAX_SIG_URLS_EXPLAIN'			=> '會員簽名檔中允許的最多連結數量。設定為 0，表示沒有限制。',
+	'MAX_SIG_POSTS_LIMIT' => '簽名檔顯示與否',
+	'MAX_SIG_POSTS_LIMIT_EXPLAIN' => '會員文章數量超過多少才會顯示。設定為 0，表示沒有限制。',
 ));
 
 // Registration Settings
