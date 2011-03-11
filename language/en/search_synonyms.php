@@ -93,7 +93,7 @@ $synonyms = array(
 	'foriegn'		=> 'foreign',
 	'fourty'		=> 'forty',
 
-	'gage'			=> 'guage',
+	'gage'			=> 'gauge',
 	'geneology'		=> 'genealogy',
 	'grammer'		=> 'grammar',
 	'gray'			=> 'grey',
@@ -114,7 +114,7 @@ $synonyms = array(
 	'irrevelant'	=> 'irrelevant',
 
 	'jeweler'	=> 'jeweller',
-	'judgement'	=> 'judgment',
+	'judgment'	=> 'judgement',
 
 	'labeled'	=> 'labelled',
 	'labour'		=> 'labor',
