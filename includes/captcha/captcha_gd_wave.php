@@ -62,8 +62,8 @@ class captcha
 				'y' => mt_rand(10, 17)
 			),
 			'lower_left'	=> array(
-				'x' => mt_rand($img_x - 5, $img_x - 45),
-				'y' => mt_rand($img_y - 0, $img_y - 15)
+				'x' => mt_rand($img_x - 45, $img_x - 5),
+				'y' => mt_rand($img_y - 15, $img_y - 0),
 			),
 		);
 
@@ -86,8 +86,8 @@ class captcha
 		}
 
 		$fontcolors[0] = imagecolorallocate($img, mt_rand(0, 120), mt_rand(0, 120), mt_rand(0, 120));
-		
-		$colors = array();
+
+ 		$colors = array();
 
 		$minr = mt_rand(20, 30);
 		$ming = mt_rand(20, 30);

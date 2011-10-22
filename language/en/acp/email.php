@@ -69,6 +69,8 @@ $lang = array_merge($lang, array(
 	'SEND_TO_USERS'			=> 'Send to users',
 	'SEND_TO_USERS_EXPLAIN'	=> 'Entering names here will override any group selected above. Enter each username on a new line.',
 	
+	'MAIL_BANNED'			=> 'Mail banned users',
+	'MAIL_BANNED_EXPLAIN'	=> 'When sending a mass e-mail to a group you can select here whether banned users will also receive the e-mail.',
 	'MAIL_HIGH_PRIORITY'	=> 'High',
 	'MAIL_LOW_PRIORITY'		=> 'Low',
 	'MAIL_NORMAL_PRIORITY'	=> 'Normal',
