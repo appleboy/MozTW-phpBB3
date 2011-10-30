@@ -135,9 +135,10 @@ $lang = array_merge($lang, array(
 	'CANNOT_REMOVE_FOLDER'		=> 'This folder cannot be removed.',
 	'CHANGE_DEFAULT_GROUP'		=> 'Change default group',
 	'CHANGE_PASSWORD'			=> 'Change password',
+	'CLICK_GOTO_FOLDER'			=> '%1$sGo to your “%3$s” folder%2$s',
 	'CLICK_RETURN_FOLDER'		=> '%1$sReturn to your “%3$s” folder%2$s',
 	'CONFIRMATION'				=> 'Confirmation of registration',
-	'CONFIRM_CHANGES'			=> 'Confirm changes',	
+	'CONFIRM_CHANGES'			=> 'Confirm changes',
 	'CONFIRM_EMAIL'				=> 'Confirm e-mail address',
 	'CONFIRM_EMAIL_EXPLAIN'		=> 'You only need to specify this if you are changing your e-mail address.',
 	'CONFIRM_EXPLAIN'			=> 'To prevent automated registrations the board requires you to enter a confirmation code. The code is displayed in the image you should see below. If you are visually impaired or cannot otherwise read this code please contact the %sBoard Administrator%s.',
@@ -210,6 +211,7 @@ $lang = array_merge($lang, array(
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'The field “%s” has invalid characters, only alphanumeric characters are allowed.',
 	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'The field “%s” has an invalid date.',
+	'FIELD_INVALID_VALUE'				=> 'The field “%s” has an invalid value.',
 
 	'FOE_MESSAGE'				=> 'Message from foe',
 	'FOES_EXPLAIN'				=> 'Foes are users which will be ignored by default. Posts by these users will not be fully visible. Personal messages from foes are still permitted. Please note that you cannot ignore moderators or administrators.',
@@ -448,7 +450,7 @@ $lang = array_merge($lang, array(
 	'UCP_PREFS_PERSONAL'		=> 'Edit global settings',
 	'UCP_PREFS_POST'			=> 'Edit posting defaults',
 	'UCP_PREFS_VIEW'			=> 'Edit display options',
-	
+
 	'UCP_PM'					=> 'Private messages',
 	'UCP_PM_COMPOSE'			=> 'Compose message',
 	'UCP_PM_DRAFTS'				=> 'Manage PM drafts',

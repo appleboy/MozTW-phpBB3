@@ -97,7 +97,7 @@ $lang = array_merge($lang, array(
 	'IM_MESSAGE'			=> 'Your message',
 	'IM_MSNM'				=> 'Please note that you need Windows Messenger installed to use this.',
 	'IM_MSNM_BROWSER'		=> 'Your browser does not support this.',
-	'IM_MSNM_CONNECT'		=> 'MSNM is not connected.\nYou have to connect to MSNM to continue.',		
+	'IM_MSNM_CONNECT'		=> 'MSNM is not connected.\nYou have to connect to MSNM to continue.',
 	'IM_NAME'				=> 'Your Name',
 	'IM_NO_DATA'			=> 'There is no suitable contact information for this user.',
 	'IM_NO_JABBER'			=> 'Sorry, direct messaging of Jabber users is not supported on this board. You will need a Jabber client installed on your system to contact the recipient above.',
@@ -106,7 +106,7 @@ $lang = array_merge($lang, array(
 	'IM_SEND_MESSAGE'		=> 'Send message',
 	'IM_SENT_JABBER'		=> 'Your message to %1$s has been sent successfully.',
 	'IM_USER'				=> 'Send an instant message',
-	
+
 	'LAST_ACTIVE'				=> 'Last active',
 	'LESS_THAN'					=> 'Less than',
 	'LIST_USER'					=> '1 user',
@@ -132,7 +132,6 @@ $lang = array_merge($lang, array(
 	'REMOVE_FOE'			=> 'Remove foe',
 	'REMOVE_FRIEND'			=> 'Remove friend',
 
-	'SEARCH_USER_POSTS'		=> 'Search user’s posts',
 	'SELECT_MARKED'			=> 'Select marked',
 	'SELECT_SORT_METHOD'	=> 'Select sort method',
 	'SEND_AIM_MESSAGE'		=> 'Send AIM message',
@@ -147,8 +146,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_COUNT'		=> 'Post count',
 
 	'USERNAME_BEGINS_WITH'	=> 'Username begins with',
-	'USER_ADMIN'			=> 'Administrate user',
-	'USER_BAN'            => 'Banning',
+	'USER_ADMIN'			=> 'Administer user',
+	'USER_BAN'				=> 'Banning',
 	'USER_FORUM'			=> 'User statistics',
 	'USER_LAST_REMINDED'	=> array(
 		0		=> 'No reminder sent at this time',
