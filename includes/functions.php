@@ -4345,7 +4345,8 @@ function page_header($page_title = '', $display_online_list = true, $item_id = 0
 	}
 	else
 	{
-		$u_login_logout = append_sid("{$phpbb_root_path}ucp.$phpEx", 'mode=login');
+		$redirect_url = ltrim($_SERVER['REQUEST_URI'], '/');
+		$u_login_logout = append_sid("{$phpbb_root_path}ucp.$phpEx", 'mode=login&amp;redirect=' . urlencode($redirect_url));
 		$l_login_logout = $user->lang['LOGIN'];
 	}
 
