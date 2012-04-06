@@ -168,20 +168,20 @@ class acp_ranks
 					{
 						$img = $path . $img;
 
-							if ($ranks && $img == $ranks['rank_image'])
-							{
-								$selected = ' selected="selected"';
-								$edit_img = $img;
-							}
-							else
-							{
-								$selected = '';
-							}
+						if ($ranks && $img == $ranks['rank_image'])
+						{
+							$selected = ' selected="selected"';
+							$edit_img = $img;
+						}
+						else
+						{
+							$selected = '';
+						}
 
-							if (strlen($img) > 255)
-							{
-								continue;
-							}
+						if (strlen($img) > 255)
+						{
+							continue;
+						}
 
 						$filename_list .= '<option value="' . htmlspecialchars($img) . '"' . $selected . '>' . $img . ((in_array($img, $existing_imgs)) ? ' ' . $user->lang['RANK_IMAGE_IN_USE'] : '') . '</option>';
 					}
@@ -199,7 +199,7 @@ class acp_ranks
 					'RANK_TITLE'		=> (isset($ranks['rank_title'])) ? $ranks['rank_title'] : '',
 					'S_FILENAME_LIST'	=> $filename_list,
 					'RANK_IMAGE'		=> ($edit_img) ? $phpbb_root_path . $config['ranks_path'] . '/' . $edit_img : $phpbb_admin_path . 'images/spacer.gif',
-					'S_SPECIAL_RANK'	=> (!isset($ranks['rank_special']) || $ranks['rank_special']) ? true : false,
+					'S_SPECIAL_RANK'	=> (isset($ranks['rank_special']) && $ranks['rank_special']) ? true : false,
 					'MIN_POSTS'			=> (isset($ranks['rank_min']) && !$ranks['rank_special']) ? $ranks['rank_min'] : 0)
 				);
 						

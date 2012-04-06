@@ -84,8 +84,11 @@ $lang = array_merge($lang, array(
 
 	'LENGTH_BAN_INVALID'		=> 'The date has to be formatted <kbd>YYYY-MM-DD</kbd>.',
 
+	'OPTIONS_BANNED'			=> 'Banned',
+	'OPTIONS_EXCLUDED'			=> 'Excluded',
+
 	'PERMANENT'		=> 'Permanent',
-	
+
 	'UNTIL'						=> 'Until',
 	'USER_BAN'					=> 'Ban one or more usernames',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Enable this to exclude the entered users from all current bans.',
